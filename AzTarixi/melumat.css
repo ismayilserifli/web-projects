@@ -84,9 +84,8 @@ main {
 }
 .sekil{
     margin:0;
-    border:2px solid red;
-    padding:center;
     width:100%;
+    text-align: center;
 }
     #searchArea {
         margin: 20px auto;
