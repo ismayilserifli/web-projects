@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daş-Kağız-Qayçı</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to right, #ff7e5f, #feb47b);
+    }
+    .game-container {
+      text-align: center;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      color: #333;
+      font-size: 24px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    .choices {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 12px 24px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #007bff;
+      color: #fff;
+      transition: background 0.3s, transform 0.2s;
+    }
+    button:hover {
+      background: #0056b3;
+      transform: scale(1.1);
+    }
+    button:active {
+      background: #00408a;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #333;
+    }
+    .score {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Daş-Kağız-Qayçı</h1>
+    <div class="choices">
+      <button data-choice="Daş">🪨</button>
+      <button data-choice="Kağız">📄</button>
+      <button data-choice="Qayçı">✂️</button>
+    </div>
+    <div class="result" id="result">Hərəkətinizi edin!</div>
+    <div class="score" id="score">Sən: 0 | Kompüter: 0</div>
+  </div>
+  <script>
+    const choices = ["Daş", "Kağız", "Qayçı"];
+    const buttons = document.querySelectorAll("button");
+    const resultDiv = document.getElementById("result");
+    const scoreDiv = document.getElementById("score");
+    let userScore = 0;
+    let computerScore = 0;
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        if (userScore >= 10 || computerScore >= 10) return;
+        
+        const userChoice = button.dataset.choice;
+        const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+        const result = determineWinner(userChoice, computerChoice);
+
+        if (result === "Sən uddun!") {
+          userScore++;
+        } else if (result === "Sən uduzdun!") {
+          computerScore++;
+        }
+
+        resultDiv.innerHTML = `
+          Sən seçdin <strong>${userChoice}</strong>, Kompüter seçdi <strong>${computerChoice}</strong>.<br>
+          <strong>${result}</strong>`;
+        scoreDiv.textContent = `Sən: ${userScore} | Kompüter: ${computerScore}`;
+
+        if (userScore === 10) {
+          resultDiv.innerHTML = "Təbriklər! Sən qalib gəldin! 🎉";
+        } else if (computerScore === 10) {
+          resultDiv.innerHTML = "Kompüter qalib gəldi! 😞";
+        }
+      });
+    });
+
+    function determineWinner(user, computer) {
+      if (user === computer) {
+        return "Bərabərə qaldız!";
+      }
+
+      if ((user === "Daş" && computer === "Qayçı") || 
+          (user === "Kağız" && computer === "Daş") || 
+          (user === "Qayçı" && computer === "Kağız")) {
+        return "Sən uddun!";
+      }
+      return "Sən uduzdun!";
+    }
+  </script>
+</body>
+</html>
