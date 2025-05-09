@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Kalkulyator</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        .calculator {
+            width: 320px;
+            height: 500px;
+            background: #333;
+            border-radius: 30px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .display {
+            height: 100px;
+            background: #000;
+            color: white;
+            font-size: 36px;
+            text-align: right;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .button {
+            height: 60px;
+            border: none;
+            border-radius: 50%;
+            font-size: 24px;
+            color: white;
+            background: #505050;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .button:active {
+            transform: scale(0.9);
+            background: #888;
+        }
+
+        .button.orange {
+            background: #FF9500;
+        }
+
+        .button.orange:active {
+            background: #CC7A00;
+        }
+
+        .button.gray {
+            background: #A5A5A5;
+            color: black;
+        }
+
+        .button.double {
+            grid-column: span 2;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="button gray" onclick="clearDisplay()">AC</button>
+            <button class="button gray" onclick="invertSign()">±</button>
+            <button class="button gray" onclick="percent()">%</button>
+            <button class="button orange" onclick="operate('/')">÷</button>
+            <button class="button" onclick="appendNumber(7)">7</button>
+            <button class="button" onclick="appendNumber(8)">8</button>
+            <button class="button" onclick="appendNumber(9)">9</button>
+            <button class="button orange" onclick="operate('*')">×</button>
+            <button class="button" onclick="appendNumber(4)">4</button>
+            <button class="button" onclick="appendNumber(5)">5</button>
+            <button class="button" onclick="appendNumber(6)">6</button>
+            <button class="button orange" onclick="operate('-')">−</button>
+            <button class="button" onclick="appendNumber(1)">1</button>
+            <button class="button" onclick="appendNumber(2)">2</button>
+            <button class="button" onclick="appendNumber(3)">3</button>
+            <button class="button orange" onclick="operate('+')">+</button>
+            <button class="button double" onclick="appendNumber(0)">0</button>
+            <button class="button" onclick="appendNumber('.')">.</button>
+            <button class="button orange" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        let currentNumber = '0';
+        let previousNumber = '';
+        let operator = null;
+
+        function updateDisplay() {
+            const display = document.getElementById('display');
+            display.textContent = currentNumber;
+        }
+
+        function appendNumber(number) {
+            if (currentNumber === '0' && number !== '.') {
+                currentNumber = number.toString();
+            } else {
+                currentNumber += number.toString();
+            }
+            updateDisplay();
+        }
+
+        function clearDisplay() {
+            currentNumber = '0';
+            previousNumber = '';
+            operator = null;
+            updateDisplay();
+        }
+
+        function invertSign() {
+            currentNumber = (parseFloat(currentNumber) * -1).toString();
+            updateDisplay();
+        }
+
+        function percent() {
+            currentNumber = (parseFloat(currentNumber) / 100).toString();
+            updateDisplay();
+        }
+
+        function operate(op) {
+            if (currentNumber === '') return;
+            if (previousNumber !== '') {
+                calculate();
+            }
+            operator = op;
+            previousNumber = currentNumber;
+            currentNumber = '';
+        }
+
+        function calculate() {
+            if (!operator || currentNumber === '') return;
+            let result;
+            const prev = parseFloat(previousNumber);
+            const curr = parseFloat(currentNumber);
+            switch (operator) {
+                case '+':
+                    result = prev + curr;
+                    break;
+                case '-':
+                    result = prev - curr;
+                    break;
+                case '*':
+                    result = prev * curr;
+                    break;
+                case '/':
+                    result = curr === 0 ? 'Error' : prev / curr;
+                    break;
+                default:
+                    return;
+            }
+            currentNumber = result.toString();
+            operator = null;
+            previousNumber = '';
+            updateDisplay();
+        }
+    </script>
+</body>
+</html>
