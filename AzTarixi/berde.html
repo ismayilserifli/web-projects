@@ -4,12 +4,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bərdə Tarixi haqqında:</title>
-    <link rel="icon" type="image/x-icon" href="../sekil/internet.png">
-    <link rel="stylesheet" type="text/css" href="melumat.css">      
+    <link rel="icon" type="image/x-icon" href="./sekil/internet.png">
+    <link rel="stylesheet" type="text/css" href="melumat.css">
+    <style>
+        footer {
+              margin-top: 60px;
+              padding: 25px 40px;
+              background-color: #222;
+              color: #aaa;
+              display: flex;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              font-size: 14px;
+            }
+
+            footer a {
+              color: #ccc;
+              text-decoration: none;
+              margin-right: 15px;
+            }
+
+            footer a:hover {
+              color: white;
+            }
+
+            /* Mobil uyğunluq */
+            @media (max-width: 768px) {
+              header {
+                padding: 15px 20px;
+              }
+
+              .container {
+                padding: 20px;
+                margin: 30px 15px;
+              }
+
+              footer {
+                flex-direction: column;
+                gap: 10px;
+              }
+
+              nav {
+                margin-top: 10px;
+              }
+            }
+    </style>      
 </head>
 <body>
     <div class="basliq">
-        <h1>Bərdə Şəhərİ Tarİxİ Haqqında:</h1>
+        <h1>Bərdə Şəhərİ Tarİxİ Haqında:</h1>
     </div>
     <div class="div2">
         <h2>Tarixi:</h2><hr>
@@ -29,11 +72,13 @@
             <li><strong>İl:</strong>2012<strong>Sayı:</strong>38.500</li>
         </ul>
     </div>
-    <div class="haqqi">
-        <p>Bu saytda Azərbaycan Bölgələrinin tarixi haqqında danışılır.</p>
-        <p>Yaxın zamanda başqa bölgələr də gələcək.</p>
-        <a href="index.html">Əsas Səyfəyə git</a>
-        <p class="p11">&copy; 2025 hersey.az</p>
-    </div>
+    <footer>
+        <div>
+          <a href="index.html">Əsas səhifə</a>
+          <a href="ozhaqqimiz.html">Haqqımızda</a>
+        </div>
+        <div>&copy; 2025 KomandaAdı. Bütün hüquqlar qorunur.</div>
+      </footer>
+    
 </body>
 </html>
