@@ -4,8 +4,51 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Gəncə Tarixi haqqında:</title>
-    <link rel="icon" type="image/x-icon" href="../sekil/internet.png">
-    <link rel="stylesheet" type="text/css" href="melumat.css">  
+    <link rel="icon" type="image/x-icon" href="./sekil/internet.png">
+    <link rel="stylesheet" type="text/css" href="melumat.css">
+    <style>
+        footer {
+              margin-top: 60px;
+              padding: 25px 40px;
+              background-color: #222;
+              color: #aaa;
+              display: flex;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              font-size: 14px;
+            }
+
+            footer a {
+              color: #ccc;
+              text-decoration: none;
+              margin-right: 15px;
+            }
+
+            footer a:hover {
+              color: white;
+            }
+
+            /* Mobil uyğunluq */
+            @media (max-width: 768px) {
+              header {
+                padding: 15px 20px;
+              }
+
+              .container {
+                padding: 20px;
+                margin: 30px 15px;
+              }
+
+              footer {
+                flex-direction: column;
+                gap: 10px;
+              }
+
+              nav {
+                margin-top: 10px;
+              }
+            }
+    </style>  
 </head>
 <body>
 	<div class="basliq">
@@ -35,11 +78,12 @@
 		<p>Şah, Gəncə şəhərini əvvəlki yerindən bir fərsəx (təxm. 6-7 km) yuxarı, hazırda çinarlar əkilmiş çeydan olan yerə köçürdü. Məscid və karvansaraylar ondan sonra qalan möhtəşəm abidələrdir. Onların planını Persiyada məşhur alim olan Bahəddin hazırlamışdır.</p>
 		<p>1647-ci ildə İrəvandan Bakıya səfər edən türk səyyahı Övliya Çələbi Gəncə şəhərindən keçir. O, qeyd edir ki, Gəncə böyük şəhər olsa da, onun qala divarları şah tərəfindən dağıdılmışdır. Onun sözlərinə görə o zaman şəhərdə altı min ev (ailə) var idi. Ə. Salamzadə qeyd edir ki, hər evdə orta hesabla 7 nəfər olduğunu nəzərə alsaq, şəhərdə təxminən 40.000 əhalinin yaşadığını qeyd etmək olar. Ö. Çələbi qeyd edir ki, şəhərdə çoxlu bağlar, ictimai binalar, karvansaraylar, hamamlar, qapalı bazar və imarət var idi. Şəhər ətrafı isə sıx tut bağları ilə əhatə olunmuşdur. O, bildirir ki, "Gəncə nalları və dəmir əşyaları da Gəncə ipəyi kimi məşhurdur."</p>
 	</div>
-	<div class="haqqi">
-        <p>Bu saytda Azərbaycan Bölgələrinin tarixi haqqında danışılır.</p>
-        <p>Yaxın zamanda başqa bölgələr də gələcək.</p>
-        <a href="index.html">Əsas Səyfəyə git</a>
-        <p class="p11">&copy; 2025 hersey.az</p>
-    </div>
+	<footer>
+	    <div>
+	      <a href="index.html">Əsas səhifə</a>
+	      <a href="ozhaqqimiz.html">Haqqımızda</a>
+	    </div>
+	    <div>&copy; 2025 KomandaAdı. Bütün hüquqlar qorunur.</div>
+	  </footer>
 </body>
 </html>
