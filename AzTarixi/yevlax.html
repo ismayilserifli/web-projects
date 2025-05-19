@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bakı Haqqında:</title>
+	<link rel="stylesheet" type="text/css" href="melumat.css"> 
+    <link rel="icon" type="image/x-icon" href="./sekil/internet.png">
+    <style>
+/* 1200px və yuxarıda kompüter üçün menyu */
+@media (min-width: 1200px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+
+  /* Hover ilə açılan menyu */
+  #mundericat:hover #menu-list {
+    display: block;
+  }
+
+  #mundericat:hover #menu-image {
+    transform: scale(0.4);
+  }
+}
+
+/* 768px - 1199px arası planşetlər üçün */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none; /* Tıklama ilə açılacaq */
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+}
+
+/* Telefonlar üçün menyunu tamamilə gizlət */
+@media (max-width: 767px) {
+  #mundericat {
+    display: none;
+  }
+}
+footer {
+      margin-top: 60px;
+      padding: 25px 40px;
+      background-color: #222;
+      color: #aaa;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Mobil uyğunluq */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .container {
+        padding: 20px;
+        margin: 30px 15px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+    </style>
+</head>
+<body>
+  <div class="basliq">
+      <h1>Bakı Şəhərİ Tarİxİ Haqqında:</h1>
+    </div>
+    <div class="div2">
+      <h2>Yevlax</h2><hr>
+      <p>Yevlax — Azərbaycanda şəhər. 1939-cu ildə rayon tabeli şəhər statusu almışdır. 6 yanvar 1965-ci ildən respublika tabeli şəhərdir. 2019-cu ildə aparılmış siyahıyaalmanın yekunlarına əsasən Yevlax rayonunun əhalisi 128,700 nəfərdir. Onun 69,798 nəfəri şəhər əhalisidir.</p>
+
+      <h2>Coğrafiyası</h2><hr>
+      <p>Yevlax coğrafi mövqeyinə görə Azərbaycanın mərkəzində mühüm kommunikasiyaların kəsişməsində yerləşməklə qədim yaşayış məskənlərindən biridir. Rayon kimi 1935-ci ilin fevral ayından fəaliyyət göstərir. Yevlax eyni zamanda respublika tabeli şəhərdir. Yevlax rayonu Ağdaş, Bərdə, Tərtər, Goranboy, Samux, Qax, Şəki rayonları ilə həmsərhəddir. Rayon 1 şəhər, 3 qəsəbə və 46 kənddən ibarətdir.</p>
+
+      <h2>Etimologiyası</h2><hr>
+      <p>Yevlax sözü əski türkcədə bataqlıq və ya nohur deməkdir.</p>
+      <p>"Yevlax" əvvəllər ərazi adı olmuşdur. Toponim ilk dəfə XVI əsr Azərbaycan tarixçisi Həsən bəy Rumlunun "Əhsən ət-təvarix" əsərində xatırlanır. Azərbaycanı Osmanlılar tutduqdan sonra 1593-cü ildə tərtib olunmuş maliyyə dəftərində Yevlax Gəncə vilayətinin tərkibində olan və Kürqırağı obaları əhatə edən sancaqlıq kimi qeyd edilir. Mənbələrdə ərəb əlifbası ilə yazılmış bu sözü "Yonlaq" və "Yəvlaq" kimi müxtəlif şəkildə oxumaq mümkündür.</p>
+      <p>Yevlax toponimi haqqında müxtəlif fikirlər mövcuddur. Azərbaycan yazıçısı Yusif Vəzir Çəmənzəminlinin ("Qan içində" romanı) yazdığına görə, bu ərazi Ovlaq adlanırdı. Bəzi tədqiqatçılar bu izahı qəbul edərək toponimi "ovlaq" sözünün təhrif forması kimi qəbul edirlər. Bir mülahizəyə görə, toponimin əsasında "yava" (qədim türk dillərində "isti"), digər mülahizəyə görə isə "yaba/yava" (boş, tənha, isti) sözü durur və məkan, yer bildirən –laq (müqayisə et: yaylaq, qışlaq) şəkilçisi qəbul edərək "isti yer, boş, kimsəsiz yer" mənasını verir.</p>
+
+      <h2>Tarixi</h2><hr>
+      <p>XIX əsrin 80-ci illərində Bakı-Tiflis dəmir yolunun çəkilməsi ilə əlaqədar olaraq stansiya kimi salınan və uzun müddət əhali tərəfindən "Vağzal" kimi tanınan Yevlax XIX əsrin sonu, XX əsrin əvvəllərinə aid rəsmi sənədlərdə və mənbələrdə Yelizavetpol quberniyasının Yevlax məntəqəsi və ya Yevlax stansiyası, sonra Yelizavetpol quberniyasının Yevlax kəndi, 1920-ci ildən isə Cavanşir qəzasının Yevlax kəndi adlanmışdır.</p>
+      <p>Azərbaycan SSR MİK-in qərarı ilə 1935-ci ilin 20 fevral tarixində Yevlax rayonu təşkil edilmişdir. 1939-cu ilin fevral ayının 1-də Azərbaycan SSR Ali Sovetinin qərarına əsasən Yevlaxda Şəhər Soveti yaradılmaqla Yevlaxa şəhər adı verilmişdir.</p>
+      <p>1962-ci il dekabrın 26-da çağrılmış Azərbaycan SSR Ali Sovetinin X sessiyasının qərarı ilə Yevlax rayonu ləğv edilərək ərazisi Ağdaş, Bərdə və Qasım İsmayılov rayonlarına verilmiş, Yevlax respublika tabeli sənaye şəhərinə çevrilmişdir. 1965-ci ildə Yevlax yenidən müstəqil rayona çevrilmişdir.</p>
+      <p>Azərbaycan SSR Ali Soveti Rəyasət Heyətinin 6 yanvar 1965-ci il tarixli fərmanı ilə Yevlax şəhəri respublika tabeliyində olan şəhərlər sırasına daxil edilmiş və Yevlax şəhərində sənaye müəssisələrinin tikintisinə başlanmışdır.</p>
+      <p>Azərbaycan KP MK-nın 1969-cu il iyul plenumundan sonra ümummilli liderimiz Heydər Əliyevin qayğısı sayəsində Yevlaxda 70-ci illərdən başlayaraq bir-birinin ardınca yeni, iri sənaye obyektləri tikilmiş və Yevlax tədricən sənaye şəhərinə çevrilmişdir. Ötən əsrin 70–80-ci illərində Yevlaxda pambıq təmizləmə, tütün fermentləmə, iki dəmir-beton məmulatları, çörək, traktor təmiri, pivə və spirtsiz içkilər zavodları, "Qarabağ" istehsalat birliyi, taxıl məhsulları kombinatı, sənaye kombinatları, onlarca iri nəqliyyat, tikinti müəssisəsi, rayonlararası təchizat bazaları fəaliyyət göstərmişdir.</p>
+      <p>Yevlax–Xankəndi, Yevlax–Balakən dəmir yolu xətləri çəkilmiş, Yevlax Hava Limanı, respublikamızdan kənarda da tanınan Xaldan kənd Kompleks orta məktəbi, şahmat məktəbi, uşaq-gənclər idman məktəbi, 19 orta məktəb (10535 şagird yerlik), 15 uşaq bağçası (840 yerlik), xəstəxana, mədəni-maarif müəssisələri, çoxmərtəbəli yaşayış binaları tikilib istifadəyə verilmişdir.</p>
+      <p>1978-ci ildə istifadəyə verilən Zaqafqaziyada ən iri sənaye müəssisəsi olan Yevlax Yun Fabrikinin işə düşməsi ilə Yevlax şəhəri sənaye məhsullarının istehsal həcminə görə respublikanın 3 ən iri sənaye şəhərindən birinə çevrilmişdir.</p>
+      <p>Yevlax şəhəri Bakıdan 293 km aralıda, Kür çayının sağ sahilində, düzənlikdədir (Gəncə–Qazax düzənliyinin cənub-şərqi, Qarabağ və Şirvan düzlərinin şimal-qərb kənarı). Yevlax şəhəri Qədim İpək yolunun üzərində yerləşir. Qışı quraq keçən mülayim-isti yarımsəhra və quru çöl iqlimi var. Ərazidən Kür çayı, Əlican, Korçay və İncəçayın aşağı axınları keçir. Mingəçevir su anbarının cənub-şərq hissəsi və Varvara su anbarı Yevlax ərazisində yerləşir. Yuxarı Qarabağ və Yuxarı Şirvan kanallarının yuxarı hissələri də rayon ərazisindədir. Ərazi torpaqları əsasən boz-çəmən, çəmən-boz, allüvial çəmən, şabalıdı, şorakətvarı boz-qonur və qoran torpaqlardır.</p>
+      <p>Bitki örtüyü əsasən yarımsəhra tiplidir. Kserofit seyrək meşələr, tuqay meşələri, düzən gölməçəlik və subasar çəmənlər, səhra bitkiləri yayılmışdır. Meşə fondu 4450 hektardır. Heyvanlar: canavar, tülkü, boz dovşan, çöl donuzu, kirpi, porsuq, çaqqal; quşlar: turac, kəklik, sığırçın, bayquş, kol xoruzu, ağacdələn, sarıköynək və s.</p>
+      <p>Yevlax, eyni zamanda, nəqliyyat qovşağı şəhəridir. Respublika əhəmiyyətli Bakı–Tbilisi dəmir yolu, Bakı–Qazax avtomobil yolu, Bakı–Supsa, Bakı–Tbilisi–Ceyhan neft kəmərləri, Qazax–Ağstafa, Bakı–Ərzurum qaz kəmərləri də Yevlaxdan keçir.</p>
+      <p>Son illər çəkilişinə başlanılmış Bakı–Tbilisi–Qars dəmir yolu xəttinin də buradan keçməsi Yevlax üçün əhəmiyyətli perspektivlər vəd edir. Yevlax rayonunun ümumi ərazisi 1465.4 kv.km-dir. Əhalinin ümumi sayı 127,899 nəfərdir. Yevlax şəhərində 69,156 nəfər, kəndlərdə (Aran qəsəbəsi də daxil olmaqla) 58,743 nəfər əhali yaşayır. Yevlaxda 1 şəhər, 3 qəsəbə və 46 kənd mövcuddur.</p>
+      <h2>Mədəniyyət</h2><hr>
+      <p>Yevlax şəhərində 2 teatr var. Onlardan biri Kukla Xalq Teatrı, digəri Bəşir Səfəroğlu adına Xalq Teatrıdır.</p>
+      <h2>İdman</h2><hr>
+      <p>Karvan futbol klubu 11 iyun 2004-cü ildə Yevlax şəhərində təsis edilmişdir. Klub üçün 5000 yerlik stadion, həmçinin ehtiyat meydança qurulmuş, futbolçular üçün düşərgə inşa edilmiş və lazımi infrastrukturla təchiz olunmuşdur.</p>
+    </div>
+    <footer>
+      <div>
+        <a href="index.html">Əsas səhifə</a>
+        <a href="ozhaqqimiz.html">Haqqımızda</a>
+      </div>
+      <div>&copy; 2025 KomandaAdı. Bütün hüquqlar qorunur.</div>
+    </footer>
+</body>
+<html>

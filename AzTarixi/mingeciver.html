@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bakı Haqqında:</title>
+	<link rel="stylesheet" type="text/css" href="melumat.css"> 
+    <link rel="icon" type="image/x-icon" href="./sekil/internet.png">
+    <style>
+/* 1200px və yuxarıda kompüter üçün menyu */
+@media (min-width: 1200px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+
+  /* Hover ilə açılan menyu */
+  #mundericat:hover #menu-list {
+    display: block;
+  }
+
+  #mundericat:hover #menu-image {
+    transform: scale(0.4);
+  }
+}
+
+/* 768px - 1199px arası planşetlər üçün */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none; /* Tıklama ilə açılacaq */
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+}
+
+/* Telefonlar üçün menyunu tamamilə gizlət */
+@media (max-width: 767px) {
+  #mundericat {
+    display: none;
+  }
+}
+footer {
+      margin-top: 60px;
+      padding: 25px 40px;
+      background-color: #222;
+      color: #aaa;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Mobil uyğunluq */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .container {
+        padding: 20px;
+        margin: 30px 15px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+    </style>
+</head>
+<body>
+  <div class="basliq">
+      <h1>Bakı Şəhərİ Tarİxİ Haqqında:</h1>
+    </div>
+    <div class="div2">
+      <h2>Mingəçevir Şəhərinin Yaranması və Tarixi</h2><hr>
+      <p>Mingəçevir şəhəri Azərbaycanın ən gənc və eyni zamanda mühüm sənaye şəhərlərindən biridir. Şəhərin əsası 1945-ci ildə Kür çayı üzərində nəhəng hidroqovşağın – Mingəçevir Su Elektrik Stansiyasının (SES) tikintisi ilə qoyulmuşdur. Bu tikintiyə minlərlə insan, o cümlədən İkinci Dünya Müharibəsinin əsir düşmüş alman əsgərləri də cəlb edilmişdi. 1948-ci ildə rəsmi olaraq şəhər statusu alan Mingəçevir qısa müddət ərzində sürətlə inkişaf etmiş və Azərbaycanın enerji mərkəzlərindən birinə çevrilmişdir.</p>
+
+      <h2>Mingəçevirin Coğrafi Mövqeyi</h2><hr>
+      <p>Mingəçevir şəhəri Azərbaycanın mərkəzində, Kür çayının sahilində, paytaxt Bakıdan təqribən 300 km aralıda yerləşir. Şəhər aran ərazidə yerləşdiyi üçün iqlimi mülayim-isti yarımsəhra və quru subtropikdir. Kür çayı şəhərin tam ortasından keçir və onu iki hissəyə ayırır. Bu, şəhərə həm gözəllik, həm də strateji əhəmiyyət verir. Kür çayı üzərində salınmış bənd və SES Mingəçevirin bütün ölkə üçün əhəmiyyətini daha da artırır.</p>
+
+      <h2>Mingəçevir Su Elektrik Stansiyası (SES)</h2><hr>
+      <p>1953-cü ildə istifadəyə verilmiş Mingəçevir Su Elektrik Stansiyası Azərbaycanın ən böyük hidroenerji mənbəyidir. Kür çayı üzərində tikilmiş bu stansiya Mingəçevir su anbarı ilə birlikdə həm elektrik enerjisi istehsalı, həm də suvarma sistemləri üçün vacib əhəmiyyət daşıyır. Mingəçevir SES hər il minlərlə meqavat-saat elektrik enerjisi istehsal edir və ölkənin enerji təhlükəsizliyində həlledici rol oynayır. Həmçinin SES-in yaradılması ilə ətraf ərazilərdə kənd təsərrüfatı üçün suvarma imkanları xeyli artmışdır.</p>
+
+      <h2>Mingəçevir Su Anbarı</h2><hr>
+      <p>Mingəçevir su anbarı — Azərbaycanın və Cənubi Qafqazın ən böyük su anbarıdır. Onun sahəsi təxminən 605 km²-dir. Su anbarı suvarma, elektrik enerjisi istehsalı və balıqçılıq üçün istifadə olunur. Həmçinin bu su anbarı şəhərin gözəlliyinə əlavə dəyər qatır və turistik əhəmiyyət daşıyır. Yay aylarında burada çimərliklər fəaliyyət göstərir, turistlər gəmilərlə gəzişmələr edir və balıq ovu ilə məşğul olurlar.</p>
+
+      <h2>Mingəçevirin Sənayesi və Energetik Rolu</h2><hr>
+      <p>Mingəçevir Azərbaycanın sənaye şəhərlərindən biridir. Burada energetika, yüngül sənaye, maşınqayırma və kimya sənayesi sahələri inkişaf etmişdir. Mingəçevir İşıqlandırma Avadanlıqları Zavodu, Tekstil Kombinatı və digər müəssisələr uzun illər şəhərin iqtisadi dayağını təşkil etmişdir. Hal-hazırda burada yeni sənaye zonaları yaradılır, həm dövlət, həm də özəl sektor tərəfindən yatırımlar cəlb olunur. Mingəçevir həm də ölkənin enerji mərkəzlərindən biri olaraq strateji əhəmiyyət daşıyır.</p>
+
+      <h2>Mingəçevir Dövlət Universiteti</h2><hr>
+      <p>2015-ci ildə yaradılmış Mingəçevir Dövlət Universiteti (MDU) şəhərin elmi və akademik potensialını formalaşdıran əsas təhsil müəssisəsidir. Universitetdə mühəndislik, iqtisadiyyat, pedaqogika, humanitar və texniki sahələr üzrə ixtisaslar tədris olunur. MDU regionda ali təhsilin inkişafına ciddi töhfə verir və Mingəçevirin elmi mərkəzə çevrilməsində əsas rol oynayır. Universitetin tələbə şəhərciyi, kitabxanası və müasir laboratoriyaları mövcuddur.</p>
+
+      <h2>Mingəçevirin Mədəniyyəti və Sosial Həyatı</h2><hr>
+      <p>Şəhərdə Mingəçevir Dövlət Dram Teatrı, Uşaq Musiqi Məktəbi, Mədəniyyət Mərkəzi və Kitabxanalar fəaliyyət göstərir. Burada müxtəlif mədəni tədbirlər, konsertlər və festivallar təşkil olunur. Şəhərdəki parklar, mədəniyyət evləri və sərgi salonları əhalinin istirahəti üçün nəzərdə tutulub. Mingəçevir həmçinin ölkədə idmanla məşğul olanların sevimli şəhəridir. Xüsusilə avarçəkmə və üzgüçülük idman növləri burada geniş yayılmışdır. Avarçəkmə üzrə ölkənin milli komandası əsasən Mingəçevirdə təlim keçir.</p>
+
+      <h2>Mingəçevir Turizmi</h2><hr>
+      <p>Mingəçevir turizm üçün böyük potensiala malikdir. Şəhərin içindən keçən Kür çayı, su anbarı, çimərliklər və parklar turistlər üçün cəlbedici məkanlardır. Yay aylarında şəhərə minlərlə insan istirahət üçün gəlir. Burada gəmilərlə gəmi gəzintiləri, çay kənarında restoranlar və çimərliklər fəaliyyət göstərir. Mingəçevir eyni zamanda su idman növləri ilə məşğul olanlar üçün ideal şəhərdir. “Kür” Olimpiya Tədris-İdman Mərkəzi isə beynəlxalq yarışlara ev sahibliyi edir.</p>
+
+      <h2>Mingəçevirin Əhalisi və Demoqrafiyası</h2><hr>
+      <p>Hal-hazırda Mingəçevirin əhalisi 100,000 nəfərə yaxındır. Şəhərdə azərbaycanlılarla yanaşı müxtəlif xalqlar da yaşayır. Əhalinin əksəriyyəti sənaye, təhsil və xidmət sahələrində çalışır. Şəhərin sürətlə inkişaf etməsi nəticəsində son illərdə yeni yaşayış binaları, ticarət mərkəzləri və inzibati binalar tikilmişdir. Əhalinin sosial rifahı yüksəlir və yeni iş yerləri açılır.</p>
+
+      <h2>Mingəçevir Bugünkü Azərbaycan üçün nə deməkdir?</h2><hr>
+      <p>Mingəçevir bu gün təkcə bir şəhər deyil, Azərbaycanın enerji, elm, sənaye və turizm simvoludur. O həm ölkənin elektrik təminatında, həm də regionun sosial-iqtisadi inkişafında aparıcı rol oynayır. Buradakı müasir infrastruktur, təbii gözəlliklər və sosial həyat onu yaşamaq və inkişaf etmək üçün ideal bir şəhərə çevirir. Mingəçevir Azərbaycanın müasir simasının bariz nümunələrindən biridir və gələcəkdə daha da inkişaf edərək yeni nailiyyətlərə imza atacağı gözlənilir.</p>
+
+    </div>
+    <footer>
+      <div>
+        <a href="index.html">Əsas səhifə</a>
+        <a href="ozhaqqimiz.html">Haqqımızda</a>
+      </div>
+      <div>&copy; 2025 KomandaAdı. Bütün hüquqlar qorunur.</div>
+    </footer>
+</body>
+<html>
