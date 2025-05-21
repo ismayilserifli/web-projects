@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lerik Haqqında:</title>
+	<link rel="stylesheet" type="text/css" href="melumat.css"> 
+    <link rel="icon" type="image/x-icon" href="./sekil/internet.png">
+    <style>
+/* 1200px və yuxarıda kompüter üçün menyu */
+@media (min-width: 1200px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+
+  /* Hover ilə açılan menyu */
+  #mundericat:hover #menu-list {
+    display: block;
+  }
+
+  #mundericat:hover #menu-image {
+    transform: scale(0.4);
+  }
+}
+
+/* 768px - 1199px arası planşetlər üçün */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none; /* Tıklama ilə açılacaq */
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+}
+
+/* Telefonlar üçün menyunu tamamilə gizlət */
+@media (max-width: 767px) {
+  #mundericat {
+    display: none;
+  }
+}
+footer {
+      margin-top: 60px;
+      padding: 25px 40px;
+      background-color: #222;
+      color: #aaa;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Mobil uyğunluq */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .container {
+        padding: 20px;
+        margin: 30px 15px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+    </style>
+</head>
+<body>
+  <div class="basliq">
+      <h1>Lerik Şəhərİ Tarİxİ Haqqında:</h1>
+    </div>
+    <div class="div2">
+      <h2>Lerik Rayonu</h2>
+      <hr>
+      <p>
+      Lerik rayonu Azərbaycan Respublikasının cənub-şərqində, Talış dağlarının qoynunda yerləşir. Bu rayon 1930-cu ildə təşkil edilmişdir və Lənkəran-Astara iqtisadi-coğrafi bölgəsinə daxildir. Lerik təbiəti, təmiz havası və uzunömürlü insanları ilə məşhurdur.
+      </p>
+
+      <h2>Coğrafi Mövqeyi</h2>
+      <hr>
+      <p>
+      Lerik rayonu Talış dağlarının yüksəkliyində yerləşir və dağlıq relyefə malikdir. Şimaldan Yardımlı, cənubdan Astara, şərqdən Lənkəran, qərbdən isə İranla sərhəddir. Ərazi dağlıq və meşəliklərlə örtülüdür. Rayonun iqlimi dağlıq subtropikdir, qış aylarında soyuq və qarlı, yayda isə sərin olur. Bu xüsusiyyətlər onu yay istirahəti üçün əlverişli edir.
+      </p>
+
+      <h2>Tarixi</h2>
+      <hr>
+      <p>
+      Lerik rayonu qədim insan məskənlərindən biri olmuşdur. Burada aparılan arxeoloji qazıntılar nəticəsində çoxsaylı tarixi abidələr aşkar olunmuşdur. Rayonda tapılan daş alətlər və qayaüstü rəsmlər bu ərazidə hələ minilliklər əvvəl insanların yaşadığını sübut edir. Lerik həm də Azərbaycanın uzunömürlü insanlarının yaşadığı bölgə kimi tanınır. Ən məşhur uzunömürlü sakini Şirəli Müslümov hesab olunur — onun 168 il yaşadığı iddia olunur.
+      </p>
+
+      <h2>İqtisadiyyat</h2>
+      <hr>
+      <p>
+      Rayonun iqtisadiyyatı əsasən kənd təsərrüfatına əsaslanır. Əsas sahələr — maldarlıq, arıçılıq, meyvəçilik və çayçılıqdır. Lerikin dağlıq relyefi əkinçiliyi məhdudlaşdırsa da, təmiz təbiəti və ekologiyası kənd təsərrüfatı məhsullarının keyfiyyətinə müsbət təsir edir. Rayonda həmçinin meşə məhsullarının emalı və bal istehsalı da inkişaf etmiş sahələrdəndir.
+      </p>
+
+      <h2>Mədəniyyət və Təhsil</h2>
+      <hr>
+      <p>
+      Lerikdə mədəni həyat aktivdir. Rayonda mədəniyyət evləri, kitabxanalar, musiqi məktəbləri və muzeylər fəaliyyət göstərir. Xüsusilə “Lerik Uzunömürlülər Muzeyi” rayona gələn turistlər üçün maraqlı məkanlardan biridir. Təhsil sahəsində də inkişaflar var: rayonda ümumtəhsil məktəbləri, uşaq bağçaları və liseylər mövcuddur.
+      </p>
+
+      <h2>Əhalisi</h2>
+      <hr>
+      <p>
+      Rayonun əhalisi əsasən talışlardan və azərbaycanlılardan ibarətdir. Əhali dağ kəndlərində və Lerik şəhərində yaşayır. Lerikdə demoqrafik artım nisbətən sabitdir. İnsanlar əsasən kənd təsərrüfatı ilə məşğuldurlar. Ailəvi həyat tərzi və qonaqpərvərlik bölgənin əsas mədəni xüsusiyyətlərindəndir.
+      </p>
+
+      <h2>Təbiəti və Turizm</h2>
+      <hr>
+      <p>
+      Lerik Azərbaycanın ən gözəl təbiətə malik rayonlarından biridir. Qalın meşələr, dağ çayları, şəlalələr və sərin yaylaqları ilə məşhurdur. “Zərdəbiyə” şəlaləsi, “Bəşir” yaylağı, “Gəlin Qaya” kimi təbii abidələr yerli və xarici turistlərin marağını cəlb edir. Son illərdə bölgədə ekoturizmin inkişafı üçün yeni istirahət mərkəzləri və yollar salınmışdır.
+      </p>
+
+      <h2>Nəqliyyat və İnfrastruktur</h2>
+      <hr>
+      <p>
+      Lerikə əsas nəqliyyat bağlantısı Lənkəran şəhəri vasitəsilədir. Lənkərandan Lerikə dağlıq yol vasitəsilə gedilir və bu yol da təmir olunmuş vəziyyətdədir. İnfrastruktur son illərdə yaxşılaşmış, yeni məktəblər, səhiyyə müəssisələri və sosial obyektlər tikilmişdir. İnternet və mobil rabitə dağ kəndlərində də təmin olunmaqdadır.
+      </p>
+
+    </div>
+    <footer>
+      <div>
+        <a href="index.html">Əsas səhifə</a>
+        <a href="ozhaqqimiz.html">Haqqımızda</a>
+      </div>
+      <div>&copy; 2025 Hersey.az Bütün hüquqlar qorunur.</div>
+    </footer>
+</body>
+<html>
