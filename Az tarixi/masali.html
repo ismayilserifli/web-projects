@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Masalı Haqqında:</title>
+    <link rel="stylesheet" type="text/css" href="melumat.css"> 
+    <link rel="icon" type="image/x-icon" href="./sekil/internet.png">
+    <style>
+/* 1200px və yuxarıda kompüter üçün menyu */
+@media (min-width: 1200px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+
+  /* Hover ilə açılan menyu */
+  #mundericat:hover #menu-list {
+    display: block;
+  }
+
+  #mundericat:hover #menu-image {
+    transform: scale(0.4);
+  }
+}
+
+/* 768px - 1199px arası planşetlər üçün */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none; /* Tıklama ilə açılacaq */
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+}
+
+/* Telefonlar üçün menyunu tamamilə gizlət */
+@media (max-width: 767px) {
+  #mundericat {
+    display: none;
+  }
+}
+footer {
+      margin-top: 60px;
+      padding: 25px 40px;
+      background-color: #222;
+      color: #aaa;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Mobil uyğunluq */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .container {
+        padding: 20px;
+        margin: 30px 15px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+    </style>
+</head>
+<body>
+  <div class="basliq">
+      <h1>Masalı Şəhərİ Tarİxİ Haqqında:</h1>
+    </div>
+    <div class="div2">
+      <h2>Masallı Rayonu</h2>
+      <hr>
+      <p>
+      Masallı rayonu Azərbaycan Respublikasının cənubunda, Lənkəran-Astara iqtisadi-coğrafi bölgəsində yerləşir. Rayon həm zəngin təbiəti, həm də mədəniyyəti ilə seçilir. 1930-cu ildə inzibati rayon kimi yaradılıb və hal-hazırda sosial-iqtisadi inkişaf baxımından regionun önəmli rayonlarından biridir.
+      </p>
+
+      <h2>Coğrafi Mövqeyi</h2>
+      <hr>
+      <p>
+      Masallı rayonu şimaldan Cəlilabad, şərqdən Xəzər dənizi, cənubdan Lənkəran, qərbdən Yardımlı rayonları ilə həmsərhəddir. Ərazinin bir hissəsi dağlıq, digər hissəsi isə düzənlikdir. Masallı həm dağlıq yaylaqlara, həm də dənizsahili düzənliklərə malik olması ilə təbiət baxımından zəngindir. Rayonun iqlimi mülayim iqlim tipinə aiddir — yayda isti, qışda isə mülayim keçər.
+      </p>
+
+      <h2>Tarixi</h2>
+      <hr>
+      <p>
+      Masallı ərazisi tarixən Talış dağlarının ətəyində yerləşən qədim yaşayış yerlərindən biri olmuşdur. Burada müxtəlif arxeoloji qazıntılar zamanı qədim mədəniyyət nümunələri tapılmışdır. Rayonun tarixi abidələri arasında türbələr, körpülər və qədim məscidlər var. Eyni zamanda, bölgədə xalq sənətkarlığı və folklor da geniş yayılmışdır.
+      </p>
+
+      <h2>İqtisadiyyat</h2>
+      <hr>
+      <p>
+      Masallı rayonunun iqtisadiyyatı əsasən kənd təsərrüfatına əsaslanır. Əsas sahələrə çəltikçilik, tərəvəzçilik, meyvəçilik, taxılçılıq, heyvandarlıq və arıçılıq daxildir. Rayonda sənaye müəssisələri, o cümlədən qida və tikinti materialları istehsalı da fəaliyyət göstərir. Eyni zamanda, Masallı əl işləri və sənətkarlıq baxımından da zəngindir.
+      </p>
+
+      <h2>Mədəniyyət və Təhsil</h2>
+      <hr>
+      <p>
+      Masallı rayonunda zəngin mədəni həyat mövcuddur. Rayon mədəniyyət evi, kitabxanalar, musiqi məktəbləri və teatr qrupları ilə tanınır. Burada həmçinin Masallı Tarix-Diyarşünaslıq Muzeyi fəaliyyət göstərir. Təhsil sahəsində rayonda onlarla ümumtəhsil məktəbi, uşaq bağçaları və təlim-tərbiyə mərkəzləri mövcuddur.
+      </p>
+
+      <h2>Əhalisi</h2>
+      <hr>
+      <p>
+      Masallı rayonunun əhalisi əsasən azərbaycanlılardan və talışlardan ibarətdir. Əhali kəndlərdə və Masallı şəhərində cəmləşmişdir. İnsanlar əsasən ailəvi təsərrüfatla məşğuldurlar. Rayon əhalisi qonaqpərvərliyi və zəhmətkeşliyi ilə seçilir. Əhalinin sosial rifahı son illər ərzində yaxşılaşmışdır.
+      </p>
+
+      <h2>Təbiəti və Turizm</h2>
+      <hr>
+      <p>
+      Masallı rayonu təbii gözəllikləri ilə seçilir. Burada İstisu adlı müalicəvi termal bulaq, Viləşçay su anbarı, dağ meşələri, çaylar və yaylaqlar yerləşir. “İstisu” sanatoriyası sağlamlıq turizmi baxımından məşhurdur. Bundan əlavə, Viləşçay üzərində yerləşən Viləş körpüsü və ətraf təbiət turizm üçün ideal şərait yaradır.
+      </p>
+
+      <h2>Nəqliyyat və İnfrastruktur</h2>
+      <hr>
+      <p>
+      Masallı rayonu Bakı-Astara magistral avtomobil yolu üzərində yerləşdiyindən nəqliyyat əlaqələri çox əlverişlidir. Rayon mərkəzi və kəndləri arasında müntəzəm avtobus və taksi xidmətləri mövcuddur. İnfrastruktur sahəsində su, qaz, elektrik enerjisi və rabitə təminatı genişlənmişdir. Son illərdə yeni məktəblər, xəstəxanalar, parklar və mədəniyyət mərkəzləri tikilmişdir.
+      </p>
+
+    </div>
+    <footer>
+      <div>
+        <a href="index.html">Əsas səhifə</a>
+        <a href="ozhaqqimiz.html">Haqqımızda</a>
+      </div>
+      <div>&copy; 2025 Hersey.az Bütün hüquqlar qorunur.</div>
+    </footer>
+</body>
+<html>
