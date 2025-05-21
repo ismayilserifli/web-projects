@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Azərbaycan Bölgələrinin Tarixi Məlumatları</title>
+    <link rel="icon" type="image/x-icon" href="./sekil/internet.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Tam səhifə hündürlüyü və sütun şəklində flex container */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Bədən üçün əsas rəng və minimum hündürlük */
+        body {
+            background-color: #f3f4f6;
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh; /* tam ekran hündürlüyü */
+        }
+
+        /* Container məzmunu səhifənin qalan hissəsini tutur */
+        .container {
+            flex: 1;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header dizaynı */
+        header {
+            background-color: #2563eb;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header içərisində məzmun */
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Başlıq stili */
+        h1 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Dropdown menyu */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropbtn {
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropbtn img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #fff;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Main məzmun sahəsi, səhifənin qalan yerini tutur */
+        main {
+            flex-grow: 1;
+            padding: 2rem 0;
+        }
+
+        /* Bölgələrin grid görünüşü */
+        .regions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        /* Bölgə kartları */
+        .region-card {
+            text-decoration: none;
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .region-card:hover {
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .region-card h2 {
+            color: #2563eb;
+            margin-bottom: 0.5rem;
+        }
+
+        .region-card p {
+            color: #6b7280;
+        }
+
+        /* Footer dizaynı */
+        footer {
+            margin-top: 60px;
+            padding: 25px 40px;
+            background-color: #222;
+            color: #aaa;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #ccc;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        /* Mobil uyğunluq */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            .container {
+                padding: 20px;
+                margin: 30px 15px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav {
+                margin-top: 10px;
+            }
+        }
+        /* Wrapper */
+        .container.header-content {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+
+        /* Başlıq */
+        h1 {
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          flex: 1 1 auto;
+          min-width: 200px;
+        }
+
+        /* Search Wrapper - ümumi */
+        .search-wrapper {
+          position: relative;
+          max-width: 400px;
+          width: 100%;
+          margin: 0;
+          padding: 0;
+          flex-shrink: 0;
+        }
+
+        /* Input */
+        .search-input {
+          width: 100%;
+          padding: 10px 18px;
+          font-size: 16px;
+          border: none;
+          border-radius: 50px;
+          background: #f1f5f9;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+          transition: 0.3s ease;
+          outline: none;
+        }
+
+        .search-input:focus {
+          background: #e2e8f0;
+          box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+
+        /* Nəticə konteyneri */
+        .search-results {
+          position: absolute;
+          top: 110%;
+          left: 0;
+          right: 0;
+          background: #fff;
+          border-radius: 12px;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          z-index: 10;
+          max-height: 300px;
+          overflow-y: auto;
+          display: none; /* JavaScript ilə açılır */
+        }
+
+        /* Nəticə itemləri */
+        .search-results a {
+          display: block;
+          padding: 14px 20px;
+          font-size: 15px;
+          text-decoration: none;
+          color: #111827;
+          border-bottom: 1px solid #f1f5f9;
+          transition: background 0.2s;
+        }
+
+        .search-results a:hover {
+          background: #f3f4f6;
+          color: #2563eb;
+        }
+
+        .search-results a:last-child {
+          border-bottom: none;
+        }
+
+        /* --- MOBIL ÜÇÜN --- */
+        @media (max-width: 821px) {
+          /* Header içində axtarış gizlənir */
+          .container.header-content {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          /* Axtarış wrapperı header daxilində gizlədək */
+          .search-wrapper {
+            display: none;
+          }
+
+          /* Axtarış wrapperı main içində görünəcək, full eni ilə */
+          main .search-wrapper {
+            display: block;
+            max-width: none;
+            width: 100%;
+            margin: 15px 0 30px 0;
+            padding: 0 10px;
+          }
+
+          .search-input {
+            font-size: 16px;
+            padding: 14px 20px;
+            border-radius: 40px;
+          }
+
+          .search-results a {
+            font-size: 14px;
+            padding: 12px 16px;
+          }
+        }
+        main .search-wrapper {
+          display: none;
+        }
+
+        /* Telefonlar üçün (768px-dən kiçik) göstər */
+        @media (max-width: 820px)  {
+          main .search-wrapper {
+            display: block;
+          }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>Azərbaycan Bölgələrinin Tarixi Məlumatları</h1>
+
+            <!-- Axtarış sahəsi desktop üçün burda -->
+            <div class="search-wrapper">
+              <input type="text" id="searchInput" class="search-input" placeholder="Bölgə adı axtarın..." oninput="searchItems()">
+              <div id="searchResults" class="search-results"></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <!-- MOBİL ÜÇÜN AXTARIŞ burda -->
+            <div class="search-wrapper">
+              <input type="text" id="searchInputMobile" class="search-input" placeholder="Bölgə adı axtarın..." oninput="searchItemsMobile()">
+              <div id="searchResultsMobile" class="search-results"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="regions-grid">
+                <a href="abseron.html" class="region-card">
+                    <h2>Abşeron tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="baki.html" class="region-card">
+                    <h2>Bakı tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="berde.html" class="region-card">
+                    <h2>Bərdə tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="gence.html" class="region-card">
+                    <h2>Gəncə tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="goyce.html" class="region-card">
+                    <h2>Göyçə Mahalı tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="xankendi.html" class="region-card">
+                    <h2>Xankendi tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="mingeciver.html" class="region-card">
+                    <h2>Mingəçevir tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="naxcivan.html" class="region-card">
+                    <h2>Naxçıvan tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="naftalan.html" class="region-card">
+                    <h2>Naftalan tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="lenkeran.html" class="region-card">
+                    <h2>Lənkəran tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="samaxi.html" class="region-card">
+                    <h2>Şamaxı tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="sumqayit.html" class="region-card">
+                    <h2>Sumqayıt tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="seki.html" class="region-card">
+                    <h2>Şəki tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="sirvan.html" class="region-card">
+                    <h2>Şirvan tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="susa.html" class="region-card">
+                    <h2>Şuşa tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+                <a href="yevlax.html" class="region-card">
+                    <h2>Yevlax tarixi haqqında:</h2>
+                    <p>Daha ətraflı məlumat üçün klikləyin</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+          <a href="ozhaqqimiz.html">Haqqımızda</a>
+        </div>
+        <div>&copy; 2025 Hersey.az Bütün hüquqlar qorunur.</div>
+    </footer>
+    <script>
+      const items = [
+        { name: "Bakı", link: "baki.html" },
+        { name: "Baki", link: "baki.html" },
+        { name: "Gəncə", link: "gence.html" },
+        { name: "Gence", link: "gence.html" },
+        { name: "Bərdə", link: "berde.html" },
+        { name: "Berde", link: "berde.html" },
+        { name: "Göyçə Mahalı", link: "goyce.html" },
+        { name: "Goyce Mahali", link: "goyce.html" },
+        { name: "Naxçıvan", link: "naxcivan.html" },
+        { name: "Naxcivan", link: "naxcivan.html" },
+        { name: "Lənkəran", link: "lenkeran.html" },
+        { name: "Lenkeran", link: "lenkeran.html" },
+        { name: "Şamaxı", link: "samaxi.html" },
+        { name: "samaxi", link: "samaxi.html" },
+        { name: "Sumqayıt", link: "sumqayit.html" },
+        { name: "Sumqayit", link: "sumqayit.html" },
+        { name: "Şəki", link: "seki.html" },
+        { name: "Seki", link: "seki.html" },
+        { name: "Şuşa", link: "susa.html" },
+        { name: "Susa", link: "susa.html" },
+        { name: "Mingəçevir", link: "mingeciver.html" },
+        { name: "Mingecevir", link: "mingeciver.html" },
+        { name: "Şirvan", link: "sirvan.html" },
+        { name: "Sirvan", link: "sirvan.html" },
+        { name: "Xankəndi", link: "xankendi.html" },
+        { name: "Xankendi", link: "xankendi.html" },
+        { name: "Naftalan", link: "naftalan.html" },
+        { name: "Abşeron", link: "abseron.html" },
+        { name: "Abseron", link: "abseron.html" },
+        { name: "Ağdam", link: "agdam.html" },
+        { name: "Agdam", link: "agdam.html" },
+        { name: "Yevlax", link: "yevlax.html" }
+      ];
+
+      function searchItems() {
+        const input = document.getElementById("searchInput").value.toLowerCase();
+        const results = document.getElementById("searchResults");
+        results.innerHTML = "";
+
+        if (input === "") {
+          results.style.display = "none";
+          return;
+        }
+
+        const filtered = items.filter(item => item.name.toLowerCase().includes(input));
+
+        if (filtered.length > 0) {
+          filtered.forEach(item => {
+            const a = document.createElement("a");
+            a.href = item.link;
+            a.textContent = item.name;
+            results.appendChild(a);
+          });
+        } else {
+          const div = document.createElement("div");
+          div.textContent = "Nəticə tapılmadı";
+          div.style.color = "gray";
+          div.style.padding = "10px 16px";
+          results.appendChild(div);
+        }
+
+        results.style.display = "block";
+      }
+
+      // Klikdən sonra axtarış nəticəsini gizlət
+      document.addEventListener("click", function (event) {
+        const searchWrapper = document.querySelector(".search-wrapper");
+        if (!searchWrapper.contains(event.target)) {
+          document.getElementById("searchResults").style.display = "none";
+        }
+      });
+      function searchItemsMobile() {
+      const input = document.getElementById("searchInputMobile").value.toLowerCase();
+      const results = document.getElementById("searchResultsMobile");
+      results.innerHTML = "";
+
+      if (input === "") {
+        results.style.display = "none";
+        return;
+      }
+
+      const filtered = items.filter(item => item.name.toLowerCase().includes(input));
+
+      if (filtered.length > 0) {
+        filtered.forEach(item => {
+          const a = document.createElement("a");
+          a.href = item.link;
+          a.textContent = item.name;
+          results.appendChild(a);
+        });
+      } else {
+        const div = document.createElement("div");
+        div.textContent = "Nəticə tapılmadı";
+        div.style.color = "gray";
+        div.style.padding = "10px 16px";
+        results.appendChild(div);
+      }
+
+      results.style.display = "block";
+    }
+
+    // Mobil üçün klikdən sonra nəticəni gizlətmək
+    document.addEventListener("click", function (event) {
+      const searchWrapperMobile = document.querySelector("main .search-wrapper");
+      if (searchWrapperMobile && !searchWrapperMobile.contains(event.target)) {
+        document.getElementById("searchResultsMobile").style.display = "none";
+      }
+    });
+    </script>
+</body>
+</html>
