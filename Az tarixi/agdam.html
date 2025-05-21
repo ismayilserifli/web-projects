@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ağdam Haqqında:</title>
+	<link rel="stylesheet" type="text/css" href="melumat.css"> 
+    <link rel="icon" type="image/x-icon" href="./sekil/internet.png">
+    <style>
+/* 1200px və yuxarıda kompüter üçün menyu */
+@media (min-width: 1200px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+
+  /* Hover ilə açılan menyu */
+  #mundericat:hover #menu-list {
+    display: block;
+  }
+
+  #mundericat:hover #menu-image {
+    transform: scale(0.4);
+  }
+}
+
+/* 768px - 1199px arası planşetlər üçün */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none; /* Tıklama ilə açılacaq */
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+}
+
+/* Telefonlar üçün menyunu tamamilə gizlət */
+@media (max-width: 767px) {
+  #mundericat {
+    display: none;
+  }
+}
+footer {
+      margin-top: 60px;
+      padding: 25px 40px;
+      background-color: #222;
+      color: #aaa;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Mobil uyğunluq */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .container {
+        padding: 20px;
+        margin: 30px 15px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+    </style>
+</head>
+<body>
+  <div class="basliq">
+      <h1>Ağdam Şəhərİ Tarİxİ Haqqında:</h1>
+    </div>
+    <div class="div2">
+      <h2>Ağdam Rayonu</h2>
+      <hr>
+      <p>
+      Ağdam rayonu Azərbaycan Respublikasının Qarabağ bölgəsində yerləşir. 1930-cu ildə inzibati rayon kimi yaradılmışdır. Ərazisi təxminən 1,150 kvadrat kilometrdir. Rayon Azərbaycanın ən qədim yaşayış məskənlərindən biri olub, tarixi, mədəni və strateji baxımdan önəmli ərazilərdən sayılır.
+      </p>
+
+      <h2>Coğrafi Mövqeyi</h2>
+      <hr>
+      <p>
+      Ağdam rayonu Azərbaycanın qərbində, Qarabağın düzənlik hissəsində yerləşir. Şimaldan Tərtər, şərqdən Bərdə və Ağcabədi, cənubdan isə Füzuli rayonları ilə həmsərhəddir. Qərbdə isə Ermənistanla sərhədi vardır. Ərazi əsasən düzənlik və qismən dağətəyi relyefə malikdir. İqlimi mülayim-isti yarımsəhra və quru çöl iqlimi tipindədir.
+      </p>
+
+      <h2>Tarixi</h2>
+      <hr>
+      <p>
+      Ağdam uzun əsrlər boyunca Azərbaycan tarixində mühüm rol oynamış bölgələrdən biridir. Burada müxtəlif dövrlərə aid tarixi abidələr, türbələr və qəbiristanlıqlar mövcuddur. 1993-cü ildə Ermənistan silahlı qüvvələri tərəfindən işğal edilmiş, bu müddət ərzində Ağdam şəhəri və bir çox kəndləri tamamilə dağıdılmışdır. 2020-ci ildə 44 günlük Vətən Müharibəsi nəticəsində Azərbaycan ordusu tərəfindən işğaldan azad edilmişdir. Hazırda rayonun yenidən qurulması və bərpası davam etdirilir.
+      </p>
+
+      <h2>İqtisadiyyat</h2>
+      <hr>
+      <p>
+      Ağdam rayonu əvvəllər kənd təsərrüfatı, xüsusilə də taxılçılıq, pambıqçılıq, üzümçülük və heyvandarlıq sahəsində inkişaf etmişdi. Eyni zamanda, rayonda sənaye müəssisələri və emal zavodları da fəaliyyət göstərirdi. İşğal dövründə bu sahələr iflic olsa da, hazırda yenidən canlandırılma prosesi gedir. Dövlət tərəfindən yeni infrastruktur layihələri həyata keçirilir, yollar, məktəblər, suvarma sistemləri və sənaye sahələri qurulur.
+      </p>
+
+      <h2>Mədəniyyət və Təhsil</h2>
+      <hr>
+      <p>
+      Ağdam mədəni irsi ilə zəngin bir rayondur. Rayon ərazisində bir çox tarixi abidələr — Şahbulaq qalası, Gülablı türbəsi və qədim qəbiristanlıqlar yerləşir. Ağdam həm də muğam sənətinin mərkəzlərindən biri olmuşdur. Azərbaycanın məşhur muğam ifaçısı Qədir Rüstəmov bu torpağın yetirməsidir. İşğaldan əvvəl burada fəaliyyət göstərən Ağdam Çörək Muzeyi dünyada yeganə belə muzey idi. Hazırda bu və digər mədəniyyət mərkəzləri yenidən bərpa olunur.
+      </p>
+
+      <h2>Əhalisi</h2>
+      <hr>
+      <p>
+      İşğaldan əvvəl Ağdam rayonunun əhalisi 130 mindən çox idi. Onların əksəriyyəti işğal dövründə məcburi köçkün kimi Azərbaycanın müxtəlif bölgələrində yerləşdirilmişdi. Hal-hazırda Ağdam azad olunduqdan sonra sakinlərin doğma torpaqlarına qayıtması üçün geniş qayıdış proqramı həyata keçirilir. Yeni salınan “Ağdam şəhəri” layihəsi çərçivəsində müasir evlər, məktəblər, xəstəxanalar və digər sosial obyektlər tikilir.
+      </p>
+
+      <h2>Nəqliyyat və İnfrastruktur</h2>
+      <hr>
+      <p>
+      Ağdam rayonunda hazırda genişmiqyaslı infrastruktur layihələri həyata keçirilir. Şəhərə avtomobil yolları, dəmir yolu xətləri çəkilir. Ağdam dəmir yolu vağzalı yenidən qurulur və şəhər yeni nəqliyyat sisteminə qovuşdurulur. Bununla yanaşı, elektrik enerjisi, içməli su, qaz və rabitə infrastrukturu da bərpa olunur.
+      </p>
+
+    </div>
+    <footer>
+      <div>
+        <a href="index.html">Əsas səhifə</a>
+        <a href="ozhaqqimiz.html">Haqqımızda</a>
+      </div>
+      <div>&copy; 2025 KomandaAdı. Bütün hüquqlar qorunur.</div>
+    </footer>
+</body>
+<html>

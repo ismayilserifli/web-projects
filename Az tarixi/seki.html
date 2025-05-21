@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Şəki Haqqında:</title>
+	<link rel="stylesheet" type="text/css" href="melumat.css"> 
+    <link rel="icon" type="image/x-icon" href="./sekil/internet.png">
+    <style>
+/* 1200px və yuxarıda kompüter üçün menyu */
+@media (min-width: 1200px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+
+  /* Hover ilə açılan menyu */
+  #mundericat:hover #menu-list {
+    display: block;
+  }
+
+  #mundericat:hover #menu-image {
+    transform: scale(0.4);
+  }
+}
+
+/* 768px - 1199px arası planşetlər üçün */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #mundericat {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 120px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-image {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+
+  #menu-list {
+    display: none; /* Tıklama ilə açılacaq */
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  #menu-list li {
+    margin: 5px 0;
+  }
+
+  #menu-list li a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #menu-list li a:hover {
+    color: darkblue;
+  }
+}
+
+/* Telefonlar üçün menyunu tamamilə gizlət */
+@media (max-width: 767px) {
+  #mundericat {
+    display: none;
+  }
+}
+footer {
+      margin-top: 60px;
+      padding: 25px 40px;
+      background-color: #222;
+      color: #aaa;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Mobil uyğunluq */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .container {
+        padding: 20px;
+        margin: 30px 15px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+    </style>
+</head>
+<body>
+  <div class="basliq">
+      <h1>Şəki Şəhərİ Tarİxİ Haqqında:</h1>
+    </div>
+    <div class="div2">
+      <h2>Şəki</h2><hr>
+      <p>Azərbaycan Respublikasında şəhər, Şəki rayonunun inzibati mərkəzi. 4 yanvar 1963-cü ildən respublika tabeli şəhərdir.</p>
+
+      <p>1846-cı ildən 1968-ci ilə qədər "Nuxa" adlandırılmışdır. Şəki rayonunun inzibati mərkəzidir. Sovet dövründə respublika tebeliyində olan şəhər statusuna malik idi. Hal-hazırda da Şəki rayonu tərkibində deyil, birbaşa respublika tabeliyindədir. Amma Şəki şəhər icra hakimiyyəti başçısının səlahiyyətləri həm də Şəki rayonuna şamildir.</p>
+
+      <p>Şəki şəhəri respublikanın şimal-qərbində, Kiş çayının sol sahilində, dəniz səviyyəsindən 700 metr yüksəklikdə, paytaxt Bakı şəhərindən 370 km aralıda, Böyük Qafqaz sıra dağlarının cənub ətəklərində, mərkəzi regionlardan uzaqda – təcrid olunmuş bir məkanda yerləşir. Şəhəri əhatə edən təbiət, meşələrlə örtülmüş dağlar öz gözəlliyi ilə insanı valeh edir. Xan yaylağının sıldırım yollarıyla şimal tərəfdən şəhərə yaxınlaşacaq olursaq qarşımıza nəticəsində iki yarğanın əmələ gəldiyi iki böyük uçuruma — Çaqqaldar və Ottal uçurumlarına rast gələrik. Şəki şəhərinin qəribə quruluşu vardır. Şərqdən Qərbə axan Qurcanaçay çayı şəhəri iki hissəyə, daha yüksəkdə yerləşən Cənub, digəri isə vadidə yerləşən Şimal hissələrinə bölür.</p>
+
+      <h2>Etimologiyası</h2><hr>
+      <p>Şəki Azərbaycanın ən qədim şəhərlərindən biridir. Orta əsrlərə aid mənbələrdə onun adı Şaki, Şəka, Şakki və s. kimi adlandırılmışdır. 18-ci əsrin ortalarında Şəki şəhərinin yaxınlığındakı Nuxa şəhəri Şəki xanlığının mərkəzi olduqdan sonra köhnə Şəki şəhəri tarix səhnəsindən silinib getdi.</p>
+
+      <p>Qədim müəlliflərdən Ptolomey, Alban şəhərləri içərisində "Niqa" adlı yaşayış məntəqəsinin olduğunu qeyd edib. Abbasqulu Ağa Bakıxanovun yazdığına görə Nuxa şəhəri yerinin vəziyyətinə görə həmin Naxiya və Naciya şəhəridir ki, qədim tarixlərdə Şirvan şəhərlərindən sayilirdi. A. Y. Krimski Niqanın sonrakı Nuxa olması mülahizəsinə şərik çıxır. Lakin XIX əsrin başlanğıcında həmin mülahizənin əleyhdarları da var idi. Akademik V. Dorn belə hesab edirdi ki, Niqa İberiya ilə Alazan arasında olan sahədə yerləşirdi və onu Nuxa ilə eyniləşdirmək olmaz. "Nuxa" sözünün antik dövürdən bəlli olan Niqa məskəni ilə bağlılığı hələ mübahisəli bir məsələdir. Mülahizələr var ki, "Şəki" adı eramızdan əvvəl VII əsrdə Qara dənizin şimal sahillərində Dərbənd keçidi vasitəsilə Cənubi Qafqaza, oradan da Kiçik Asiyaya hərəkət edən sak tayfalarının adı ilə bağlıdır. Onlar Cənubi Qafqazda ən yaxşı torpaqları tutaraq bu yerlərə Sakasena adını verdilər. Sakların məskunlaşdığı ərazilərdən biri də Şəki idi.</p>
+
+      <h2>Tarix</h2><hr>
+      <p>Mənbələrin verdiyi məlumata görə, vaxtilə indiki Şəki şəhərindən 10–15 km cənubda olmuş köhnə Şəki şəhərini Sasani hökmdarı I Qubad (480–531) tikdirmişdir. Sonradan Şəki Qafqaz Albaniyasının ən iri şəhərlərindən birinə çevrildi. Şərq kilsələrinin anası hesab olunan qədim Kiş Alban məbədi də məhz Şəki şəhəri yaxınlığında yerləşmişdi. Ərəb istilası ərəfəsində Qafqaz Albaniyasının 11 inzibati vilayətindən biri Şəki əyaləti idi. Ərəb işğalları nəticəsində Şəki əyaləti III əmirliyin tərkibinə daxil edildi. Xilafətin zəiflədiyi bir dövrdə Şəkidə müstəqil knyazlıq yarandı. XIV əsrin I yarısında Hülakilər dövləti iflasa uğradıqdan sonra Şirvanşahlar dövləti ilə yanaşı Şəki də müstəqillik qazandı və Orlat sülaləsi hakimiyyətə gəldi. 1551-ci ildə şah Təhmasib Şəkinin müstəqilliyinə son qoydu. Şəki Səfəvilər dövlətinə birləşdirildi.</p>
+
+      <p>Şəkinin XVII əsr memarlığı da müəyyən əhəmiyyətə malik idi. Övliya Çələbinin verdiyi məlumata görə, daşdan tikilmiş gözəl Şəki qalası təpəlikdə yerləşirdi. Qalanın "Şirvan" və "Gəncə" adlanan iki darvazası vardı. Şəhərdə 3 min ev, 7 məscid vardı ki, bu məscidlərdən bazar meydanında yerləşən Mirzə Əli məscidi və qaladakı iki məscid daha çox diqqəti cəlb edirdi. Şəhərin karvansaraları, hamamları və kiçik bazarı var idi. XVII əsrdə Şəki şəhərində 20 min nəfərin yaşadığı ehtimal edilir.</p>
+
+      <p>1747-ci ildə yaranmış Şəki xanlığı Azərbaycan xanlıqları içərisində ən güclü feodal dövləti idi. 1805-ci il Kürəkçay müqaviləsinə əsasən Şəki xanlığı Rusiyadan vassal asılılığına düşdü. 1813-cü il Gülüstan sülh müqaviləsi ilə İran — başqa sözlə Qacar dövləti, Şəki xanlığı ərazisinin Rusiya imperiyasına birləşdirilməsini rəsmən tanıdı. 1819-cu ildə Şəkidə xan üsul-idarəsi ləğv olundu. Xanlığın əvəzinə Şəki əyaləti yaradıldı. 1840-cı ildə Kaspi vilayətinin tərkibində Nuxa qəzası yaradıldı. Qəza 1846-cı ildən Şamaxı quberniyasının tərkibinə daxil oldu və Nuxa qəzası adlandırıldı.</p>
+
+      <p>Ruslar Şəki xanlığını 1819-cu ildə ləğv etdikdən 5 il sonra sonra — 1824-cü ildə, onun keçmiş ərazisində, yəni Şəki əyalətində, əhalinin ilk siyahıyaalınmasını keçirdilər. Həmin siyahıyaalma nəticələrinə əsasən o vaxt Qışlaq və Çapağan kəndləri də inzibati cəhətdən Nuxa şəhərinin tərkibində idi və bu kəndlərlə birlikdə Nuxa şəhərinin əhalisi 13 min 351 nəfər idi.</p>
+
+      <p>Kaptalizmin inkişafı dövründə şəhər inzibati cəhətdən məhəllələrə bölünürdü.</p>
+
+      <p>1920-ci il may ayının 5-də Şəkidə sovet hakimiyyəti quruldu. 1930-cu ildə Azərbaycan SSR-nın inzibati ərazi bölgüsündə dəyişiklik edildi və Nuxa rayonu təşkil edildi. 1963-cü il yanvar ayının 4-də Nuxa rayonu ləğv edilərək ərazisi Vartaşen (indiki Oğuz) rayonuna verildi, respublika tabeliyində Nuxa şəhəri yaradıldı. 1965-ci ildən yenidən müstəqil Nuxa rayonu təşkil edildi. 1968-ci ildən ərazi Şəki şəhəri adlanmağa başladı.</p>
+
+      <h2>Müasir dövr</h2><hr>
+      <p>Azərbaycanın Şəki şəhərinin Dünyanın Tarixi Şəhərləri Liqasına üzv olması barədə 2008-ci il dekabrın 8-də təşkilatın prezidenti, Yaponiyanın Kyoto şəhər bələdiyyəsinin sədri Daisaku Kodokavadan gəlmiş təbrik məktubunda bildirilir ki, Dünyanın Tarixi Şəhərləri Liqasının İdarə Heyətinin 2008-ci ilin oktyabrında keçirilmiş iclasında Şəki təşkilata üzv qəbul edilmişdir.</p>
+
+      <p>2012-ci ildə abadlıq, quruculuq və tikinti sahəsində görüləcək işlər müəyyənləşmişdir: Şəki Şəhər İcra Hakimiyyəti və Arxitektura Şəhərsalma Komitəsi ilə birlikdə Şəki şəhərinin Baş Planı hazırlanmışdır. Baş Plana əsasən bir sıra infrastruktur layihələrin həyata keçirilməsi, həmçinin, şəhərin qərbə doğru genişlənməsi, Oxud, İnçə, Kİş, Qoxmuq kəndlərinin də şəhər ərazisinə daxil olması nəzərdə tutulmuşdur.</p>
+
+      <h2>Coğrafiyası</h2><hr>
+      <p>Hal-hazırkı şəhərin sahib olduğu mənzərəli görünüşü, relyef müxtəlifliyi şəhərin tikiliş və quruluş sisteminə öz təsirini göstərmişdir. Şəhərin sol və sağ hissələri arasında 450 m məsafə vardır. 18-ci əsrdə qurulmuş şəhər 19-cu əsrin ortalarına qədər qorunub saxlanmış, strukturunda heç bir dəyişikliklər edilməmişdir. Şəki yaşıllığa bürünmüş evlərlə əhatə olunub. Əslində isə Şəki şəhəri təbiətin bir hissəsi olub, burda yaradılan arxitektura əsərləri ilə bəzədilib. Bu yalnız möhtəşəm dağ mənzərəsiylə sərhədlənməyib, həm də təbiətlə uyğunluq təşkil edən planlaşdırmaya əsaslanır. Bundan əlavə hər bir ev öz bağı və dəmir hasarı ilə əhatələnmişdir. Şəki küçələri evlərin uyğun düzülüşüylə deyil əksinə özünə xas planlaşdırmaya əsasən qurulmuş və evləri bir biridən çəpər və hasarlar ayırır. Sakinlər feodal dövrünə xas, rayonlarda fəaliyyət göstərən ticarət obyektlərinə əsasən yerləşmiş, bu isə öz növbəsində Şəkinin planlaşdırılmasında öz əksini tapmışdı. O dövrdən qalma məhəllə, küçə adları indiyə qədər qorunub saxlan...</p>
+
+      <h2>Maddi-mədəni irsi</h2><hr>
+      <p>Memarlıq abidələrindən Şəki xan sarayı, Şəkixanovların evi, Giləkli məscidinin minarəsi, məscid, qala divarları, Şəkinin dairəvi məbədi (XVII–XIX), Zəyzid məbədi (XI–XII), yaxınlıqdakı Kiş kəndinin Kiş alban məbədi, Şəki karvansarası mühafizə olunur.</p>
+      <p>Qədim şəhərin planlaşdırılmasının spesifik xüsusiyyətlərini ayırd etmək üçün şəhər küçələrinin ümumi konstruksiyası və Şəki arxitekturasının incələnməsi vacibdir. Azərbaycanın tədricən tikilən küçələrinə sahib digər orta əsr şəhərlərindən fərqli olaraq Şəkidə bu iş qısa bir müddətdə, həm də planlı bir şəkildə həyata keçirilmişdir. Şəkinin Gürcənçaya paralel olan əsas və ən uzun küçəsi tərkibində şəhərin ən mühüm arxitektura abidələrini özündə cəmləşdirir. Şəkinin bir çox küçələri tarixi və arxitektura abidələrinin mövcudluğu ilə diqqəti cəlb edir. Birinci yerdə əlbəttə, şübhəsiz ki, əsas küçə olan Şəki küçəsi durur. Bu küçələrdən günümüzdə fəaliyyət göstərən Heydər Əliyev, Məhəmməd Əmin Rəsulzadə, Xoyski, Əfqanlar, Arxüstü, Gəncəlilər, Bağbanlar, Şərbabalar, Mirzə Fətəli Axundzadə, Mehdi Hüseyn küçələrini misal göstərmək olar.</p>
+      <p>Qürcanaçay və Dəyirman-arxı çayları şəhərin su ehtiyaclarını ödəməsilə bərabər, həm də suvarmada istifadə olunurdu. Daha sonralar çayların birləşdiyi yerdə meydançası olan yeni mərkəz quruldu. Şəki şəhərinin bu ərazidə qurulma səbəblərindən ən vacibi Qurcanaçay faktorudur. Digər çay olan Dəyirman–arxı çayı isə şəhərin ikinci aparıcı vasitəsi kimi xidmət göstərməkdədir. Şəkinin sahib olduğu təbii gözəllik şəhərdə tikilmiş bütün tarixi abidələrdə öz əksini tapmışdır. Bütün bunlar Şəki arxitekturasının özəllikləridir. Demək olar ki, qədim şəhəri xatırladacaq heç bir arxitektura nümunəsi qalmayıb. Yalnız E. Çələbinin xatirələrində Şəki haqqında bəzi məlumat var. Onun sözlərinə əsaslanaraq, onda daşdan tikilmə Şəki qalası təpənin üstündə ucaldılmışdır. Qalanın Şirvan və Gəncə adlı iki darvazası var. Burda minlərlə ev, yeddi məscid, onların arasında Mirzə Əli məscidi bazar küçəsində yerləşməsiylə xüsusi diqqəti cəlb edir. Şəhərin həmçinin bir neçə karvansara-mehmanxanası, hamamı və balaca bazarı vardır. Bu məlumata əsasən qalaynan sərhədlənməyən Şəki qala divarlarının xaricində ipək istehsalı ilə məşğul olan müəssisələr və tayı bərabəri olmayan ipək istehsalı ilə məşğul olan geniş bağlar mövcud idi. Şəhərin Çələbinin qeyd etdiyinə görə 3000 evdə 20.000-ə yaxın əhalisi mövcud idi.</p>
+      <p>Qürcanaçay və Dəyirman-arxı çayları şəhərin su ehtiyaclarını ödəməsilə bərabər, həm də suvarmada istifadə olunurdu. Daha sonralar çayların birləşdiyi yerdə meydançası olan yeni mərkəz quruldu. Şəki şəhərinin bu ərazidə qurulma səbəblərindən ən vacibi Qurcanaçay faktorudur. Digər çay olan Dəyirman–arxı çayı isə şəhərin ikinci aparıcı vasitəsi kimi xidmət göstərməkdədir. Şəkinin sahib olduğu təbii gözəllik şəhərdə tikilmiş bütün tarixi abidələrdə öz əksini tapmışdır. Bütün bunlar Şəki arxitekturasının özəllikləridir. Demək olar ki, qədim şəhəri xatırladacaq heç bir arxitektura nümunəsi qalmayıb. Yalnız E. Çələbinin xatirələrində Şəki haqqında bəzi məlumat var. Onun sözlərinə əsaslanaraq, onda daşdan tikilmə Şəki qalası təpənin üstündə ucaldılmışdır. Qalanın Şirvan və Gəncə adlı iki darvazası var. Burda minlərlə ev, yeddi məscid, onların arasında Mirzə Əli məscidi bazar küçəsində yerləşməsiylə xüsusi diqqəti cəlb edir. Şəhərin həmçinin bir neçə karvansara-mehmanxanası, hamamı və balaca bazarı vardır. Bu məlumata əsasən qalaynan sərhədlənməyən Şəki qala divarlarının xaricində ipək istehsalı ilə məşğul olan müəssisələr və tayı bərabəri olmayan ipək istehsalı ilə məşğul olan geniş bağlar mövcud idi. Şəhərin Çələbinin qeyd etdiyinə görə 3000 evdə 20.000-ə yaxın əhalisi mövcud idi.</p>
+      <p>Əsas küçələr yerli şəraitdən aslı olaraq bir az dar daha kiçik küçələrə, döngə və dalanlara bölünür. Qurulmuş plan, çay istiqamətində yönəlmiş əsas, aparıcı küçələrin rahat izlənilməsini təmin edir ki, bu da öz növbəsində əhalinin iqtisadi fəaliyyəti üçün zəruri olan amillərdən birini təşkil edir. Sənətkarlar rayonu da tədricən əsas ticarətin aparıldığı küçələrə yaxınlaşmışdır. Qeyd etmək lazımdır ki, orta əsrlərdə olan Şəki şəhəri öz əhatə etdiyi əraziyə görə yetərincə geniş bir şəhər olmuşdur.</p>
+      <p>Şəkinin planlaşdırılmasında rol oynayan əsas amillərdən biri təbiət faktorudur. Buna misal olaraq şəkinin su təchizatını qeyd edə bilərik. Artıq bildiyimiz kimi su yer altında olan gil borular vasitəsilə, həm də ki axına əsaslanan sistemə əsasən fəaliyyət göstərir. Bu isə öz növbəsində Şəki şəhərinin təbiətlə vəhdət təşkil etdiyinin bariz nümunəsidir. Şəkini digər şəhərlərdən ayıran bir digər xüsusiyyət isə onun nisbətən daha təmiz olmasıdır. Buna biz 19-cu əsrdə öz xatirələrində Şəkini təsvir edən A. P. Ziissermanın yazılarında rast gələ bilərik. Onun yazdığına görə gözəl təbii mənzərəyə sahib olan Şəki kiçik dağ çayının mənsəbində yerləşmiş, yaşıllıqların içinə qərq olmuş evlər, qoz, fındıq, tut ağaclarıyla dolu bağlardan ibarət idi. Şəkinin küçələri həmişə təmiz saxlanılır və hətta bunun üçün xüsusi adamlar da ayrılmışdı. Ümumilikdə isə Şəki sahib olduğu cazibədar təbii mənzərəsi, təmizliyi, sərin havası, axşamları gələn bülbül oxuması səsləriylə insan üzərində təsvir edilməz təsir buraxır.</p>
+      <h3>Qala</h3>
+      <p>Qala şəhərin daha yüksəkdə yerləşən hissəsində, şimal-şərqində yerləşir və Şəki xan sarayını əhatə edir. Qala təkcə hərbi-strateji cəhətdən deyil, həm də mikro iqlimi cəhətdən çox əlverişli şəraitə sahib yerdə yerləşib. Qala divarlarının ümumi uzunluğu 1300 m, şimal tərəfdəki divar 4 m hündürlüyündə, cənub tərəfindəki divar isə 8 m hündürlüyündədir. qala divarlarının qalınlığı 2.2 m-dir. Qalanın cənub və şimal tərəflərdən iki darvazası və mühafizəsi üçün nəzərdə tutulmuş bürcləri vardır. Hazırda 1958–1963-cü illərdə aparılan bərpa işlərinə baxmayaraq qala divarları və bürcləri dağılmış bir vəziyyətdir. 26 fevral 1853-cü ildə qeyd olunmuş plana əsasən qalanın tərkibindəki 40-a yaxın tarixi abidənin yenidən bərpası nəzərdə tutulurdu. Təbii bir hadisədir ki, Şəki Rusiyanın tərkibinə daxil olduqdan təxminən 50 ilə yaxın sürən bərpa işləri boyunca qalanın əvvəlki planına yetərincə dəyişikliklər edilmiş, lakin ümumilikdə qala öz əvvəlki görünüşünü qoruyub saxlaya bilmişdi. İlk öncə edilən dəyişikliklər buranı qoruyan qarnizonun tələbləri nəzərə alınırdısa, daha sonra həm də yaşayış şəraiti faktoru nəzərə alınmağa başlandı. Sonda belə bir nəticəyə gəlmək olar ki, edilən bəzi dəyişikliklərə baxmayaraq Şəki xan sarayı planlanmasında mühüm dəyişikliklərə məruz qalmayıb.</p>
+      <p>Həmçinin burda yəni qalanın içərisində düşmən hücumu zamanı Qurcanaçayın suyu kəsildiyi təqdirdə istifadə edə biləcəkləri reserv su ehtiyatı üçün nəzərdə tutulmuş su quyuları mövcuddur. Kullasovskinin yazdıqlarına görə Şəki su kəmərləri öz sadə strukturu, əlverişli olması və ucuz başa gəlməsiylə diqqəti cəlb edir. Su sistemi axına əsaslanır və yerə basdırılmış və böyük diametrli saxsı-gil borular vasitəsilə hərəkət edir. Bu borular içərisi qırmızı kərpicdən tikilmiş çənlərə tökülür. Çənə böyük bir su borusu gəlir, daha sonra isə çəndən iki-üç daha kiçik boru vasitəsilə su istifadəçilərə paylanır. Həmçinin burdan şəhərin bütün küçə və meydanları suyla təchiz olunur. Su təchizinin belə bir sadə mexanizmə uyğunluğu hər bir evin su ehtiyacını ödəməklə yanaşı istəyənlərə hətta evinin qarşısında fontan düzəldə bilməsinə imkan verir.</p>
+      <h2>Mətbəx</h2><hr>
+      <p>Şəki mətbəxi Azərbaycanın bütün mətbəxləri kimi çox zəngindir. Bütün dünyaya səs salan Şəki pitisi, Şəki halvası(paxlavası) buna sübutdur. Şəki mətbəxinin şah yeməyi Şəki pitisidir. Şəki mətbəxinə aid olan başqa yeməklərdən Balva, Sürfüllü, Ballıbadı, Şəki oyması(Yerlilər arasında Oma kimi tanınır), Qırmabadam, Tel halva, Düyü halvası, Tutlu-Südlü plov, Cücəli plov və s.. kimi yeməklərin adını çəkmək olar.</p>
+      <h2>Əhali</h2><hr>
+      <p>01.01.2021-ci ilə olan məlumata görə Şəki rayonunun əhalisi 189.0 min nəfər olmuşdur. Onlardan 68.4 min nəfəri şəhər, 120.6 min nəfəri kənd ərazisində yaşayır. Rayonda 378 şəhid ailələri, 200 Qarabağ Müharibəsi əlilləri, 2 nəfər İkinci Dünya müharibəsi Veteranı var. Rayonun 21 nəfər sakini Azərbaycan Respublikasının Əməkdar Fəxri adına layiq görülüb, 5233 nəfər Prezident Təqaüdçüsüdir. Şəki rayonunda 1764 qaçqın və 5031 məcburi köçkün məskunlaşmışdır. Təhsil alanların sayı 27661, pensiyaçıların sayı 22527 nəfərdir.</p>
+    </div>
+    <footer>
+      <div>
+        <a href="index.html">Əsas səhifə</a>
+        <a href="ozhaqqimiz.html">Haqqımızda</a>
+      </div>
+      <div>&copy; 2025 KomandaAdı. Bütün hüquqlar qorunur.</div>
+    </footer>
+</body>
+<html>

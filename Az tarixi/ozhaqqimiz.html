@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Bizim Haqqımızda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --main-color: #004080;
+      --hover-color: #00b4d8;
+      --light-bg: #f0f4f8;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--light-bg);
+      color: #222;
+    }
+
+    header {
+      background-color: var(--main-color);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    header hr {
+      width: 100%;
+      border: none;
+      border-top: 1px solid #fff3;
+      margin-top: 10px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 100%;
+      height: 2px;
+      background-color: var(--hover-color);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+
+    nav a:hover::after {
+      transform: scaleX(1);
+    }
+
+    .languages a {
+      margin-left: 10px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .languages a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--main-color);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 25px 40px;
+      background-color: #222;
+      color: #aaa;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Mobil uyğunluq */
+    @media (max-width: 768px) {
+      header {
+        padding: 15px 20px;
+      }
+
+      .container {
+        padding: 20px;
+        margin: 30px 15px;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-top">
+      <div class="logo" id="header-title">Bizim Haqqımızda</div>
+      <nav>
+        <a href="index.html" id="home-link">Əsas səhifə</a>
+        <span class="languages">
+          <a onclick="changeLanguage('az')">AZ</a> |
+          <a onclick="changeLanguage('ru')">RU</a> |
+          <a onclick="changeLanguage('en')">EN</a>
+        </span>
+      </nav>
+    </div>
+    <hr>
+  </header>
+
+ <div class="container">
+  <h2 id="mission-title">Bizim Missiyamız</h2>
+  <p id="mission-text">
+    Bu veb sayt Azərbaycanın zəngin tarixini, mədəniyyətini və bölgələrinin özünəməxsus xüsusiyyətlərini geniş auditoriyaya tanıtmaq məqsədilə yaradılmışdır. Məqsədimiz, həm yerli, həm də xarici oxuculara ölkəmiz haqqında doğru və etibarlı məlumat təqdim etməkdir.
+  </p>
+
+  <h2 id="why-title">Niyə Bu Sayt?</h2>
+  <p id="why-text">
+    Azərbaycanın hər bölgəsi — istər Şəki-Zaqatala, istər Quba-Xaçmaz, istərsə də Qarabağ və Naxçıvan — öz tarixi, memarlığı, adət-ənənələri və təbii gözəllikləri ilə fərqlənir. Lakin bu bilgilər çox zaman ya unudulur, ya da tam şəkildə paylaşılmır. Biz bu boşluğu doldurmaq və hər kəsin bu mirasa çıxışını asanlaşdırmaq istəyirik.
+  </p>
+
+  <h2 id="offer-title">Nə təqdim edirik?</h2>
+  <ul id="offer-list">
+    <li>Azərbaycanın hər bölgəsi haqqında geniş, araşdırılmış məlumatlar</li>
+    <li>Tarixi şəxsiyyətlər, hadisələr və abidələr haqqında yazılar</li>
+    <li>Foto və xəritələrlə zənginləşdirilmiş izahlı məqalələr</li>
+    <li>Sadə və aydın dildə yazılmış, hər kəsin anlaya biləcəyi biliklər</li>
+  </ul>
+
+  <h2 id="audience-title">Kimlər üçün?</h2>
+  <p id="audience-text">
+    Bu sayt tarixsevərlər, tələbələr, müəllimlər, turistlər və ümumilikdə Azərbaycanın mədəni irsinə maraq göstərən hər kəs üçün nəzərdə tutulub.
+  </p>
+
+  <h2 id="future-title">Gələcəyə Baxış</h2>
+  <p id="future-text">
+    Saytımızı daim yeniləyəcəyik. Gələcəkdə interaktiv xəritələr, video turlar və sual-cavab bölmələri də əlavə olunacaq. Biz inanırıq ki, bir xalqı tanımağın ən doğru yolu onun tarixini, bölgələrini və insanlarını tanımaqdır.
+  </p>
+  <h2 id="launch-title">Saytın yaranma tarixi</h2>
+  <p id="launch-text">
+    Bu saytın yaradılmasına 30 yanvar 2025-ci ildə başlanıldı və ___ tarixində tam hazır oldu.
+  </p>
+
+  <p style="margin-top: 30px;" id="closing-text"><strong>— Səninlə tarixə yolçuluğa başlayaq.</strong></p>
+</div>
+
+  <footer>
+    <div>
+      <a href="index.html">Əsas səhifə</a>
+    </div>
+    <div>
+      &copy; 2025 hersey.az Bütün hüquqlar qorunur.
+    </div>
+  </footer>
+
+  <script>
+  const translations = {
+    az: {
+      header: "Bizim Haqqımızda",
+      home: "Əsas səhifə",
+      missionTitle: "Bizim Missiyamız",
+      missionText: "Bu veb sayt Azərbaycanın zəngin tarixini, mədəniyyətini və bölgələrinin özünəməxsus xüsusiyyətlərini geniş auditoriyaya tanıtmaq məqsədilə yaradılmışdır. Məqsədimiz, həm yerli, həm də xarici oxuculara ölkəmiz haqqında doğru və etibarlı məlumat təqdim etməkdir.",
+      whyTitle: "Niyə Bu Sayt?",
+      whyText: "Azərbaycanın hər bölgəsi — istər Şəki-Zaqatala, istər Quba-Xaçmaz, istərsə də Qarabağ və Naxçıvan — öz tarixi, memarlığı, adət-ənənələri və təbii gözəllikləri ilə fərqlənir. Lakin bu bilgilər çox zaman ya unudulur, ya da tam şəkildə paylaşılmır. Biz bu boşluğu doldurmaq və hər kəsin bu mirasa çıxışını asanlaşdırmaq istəyirik.",
+      offerTitle: "Nə təqdim edirik?",
+      offerList: [
+        "Azərbaycanın hər bölgəsi haqqında geniş, araşdırılmış məlumatlar",
+        "Tarixi şəxsiyyətlər, hadisələr və abidələr haqqında yazılar",
+        "Foto və xəritələrlə zənginləşdirilmiş izahlı məqalələr",
+        "Sadə və aydın dildə yazılmış, hər kəsin anlaya biləcəyi biliklər"
+      ],
+      audienceTitle: "Kimlər üçün?",
+      audienceText: "Bu sayt tarixsevərlər, tələbələr, müəllimlər, turistlər və ümumilikdə Azərbaycanın mədəni irsinə maraq göstərən hər kəs üçün nəzərdə tutulub.",
+      futureTitle: "Gələcəyə Baxış",
+      futureText: "Saytımızı daim yeniləyəcəyik. Gələcəkdə interaktiv xəritələr, video turlar və sual-cavab bölmələri də əlavə olunacaq. Biz inanırıq ki, bir xalqı tanımağın ən doğru yolu onun tarixini, bölgələrini və insanlarını tanımaqdır.",
+      launchTitle: "Saytın yaranma tarixi",
+      launchText: "Bu saytın yaradılmasına 30 yanvar 2025-ci ildə başlanıldı və ___ tarixində tam hazır oldu.",
+      closing: "— Səninlə tarixə yolçuluğa başlayaq."
+    },
+    ru: {
+      header: "О нас",
+      home: "Главная страница",
+      missionTitle: "Наша Миссия",
+      missionText: "Этот сайт создан с целью популяризации богатой истории, культуры и регионов Азербайджана среди широкой аудитории.",
+      whyTitle: "Почему этот сайт?",
+      whyText: "Каждый регион Азербайджана — будь то Шеки-Закагатала, Куба-Хачмаз, Карабах или Нахчыван — уникален своей историей, архитектурой, традициями и природой. Мы хотим восполнить пробел и упростить доступ к этому наследию.",
+      offerTitle: "Что мы предлагаем?",
+      offerList: [
+        "Подробная информация о каждом регионе Азербайджана",
+        "Статьи о исторических личностях, событиях и памятниках",
+        "Иллюстрированные статьи с фото и картами",
+        "Понятный язык, доступный каждому"
+      ],
+      audienceTitle: "Для кого?",
+      audienceText: "Этот сайт предназначен для любителей истории, студентов, учителей, туристов и всех, кто интересуется культурным наследием Азербайджана.",
+      futureTitle: "Взгляд в будущее",
+      futureText: "Мы будем постоянно обновлять сайт. В будущем будут добавлены интерактивные карты, видеотуры и разделы с вопросами и ответами.",
+      launchTitle: "Дата создания сайта",
+      launchText: "Разработка сайта началась 30 января 2025 года и была завершена к ___ числу.",
+      closing: "— Давайте начнем путешествие по истории вместе."
+    },
+    en: {
+      header: "About Us",
+      home: "Home",
+      missionTitle: "Our Mission",
+      missionText: "This website was created to promote the rich history, culture, and regions of Azerbaijan to a wide audience. Our goal is to provide accurate and reliable information about our country to both local and international readers.",
+      whyTitle: "Why This Site?",
+      whyText: "Each region of Azerbaijan — whether Sheki-Zagatala, Guba-Khachmaz, Karabakh, or Nakhchivan — has its own unique history, architecture, traditions, and natural beauty. These facts are often forgotten or not fully shared. We aim to fill this gap and make this heritage easily accessible to everyone.",
+      offerTitle: "What Do We Offer?",
+      offerList: [
+        "Comprehensive, researched information about each region of Azerbaijan",
+        "Articles about historical figures, events, and monuments",
+        "Illustrated articles enriched with photos and maps",
+        "Knowledge written in simple and clear language for everyone"
+      ],
+      audienceTitle: "Who Is It For?",
+      audienceText: "This site is intended for history lovers, students, teachers, tourists, and anyone interested in the cultural heritage of Azerbaijan.",
+      futureTitle: "Looking Ahead",
+      futureText: "We will constantly update our site. In the future, we plan to add interactive maps, video tours, and Q&A sections.",
+      launchTitle: "Website Launch Date",
+      launchText: "Development of this site began on January 30, 2025, and was completed on ___ date.",
+      closing: "— Let's begin a journey through history together."
+    }
+  };
+
+  function changeLanguage(lang) {
+  const t = translations[lang];
+  if (!t) return;
+
+  document.getElementById("header-title").textContent = t.header;
+  document.getElementById("home-link").textContent = t.home;
+  document.getElementById("mission-title").textContent = t.missionTitle;
+  document.getElementById("mission-text").textContent = t.missionText;
+  document.getElementById("why-title").textContent = t.whyTitle;
+  document.getElementById("why-text").textContent = t.whyText;
+  document.getElementById("offer-title").textContent = t.offerTitle;
+
+  const offerList = document.getElementById("offer-list");
+  offerList.innerHTML = "";
+  t.offerList.forEach(item => {
+    const li = document.createElement("li");
+    li.textContent = item;
+    offerList.appendChild(li);
+  });
+
+  document.getElementById("audience-title").textContent = t.audienceTitle;
+  document.getElementById("audience-text").textContent = t.audienceText;
+  document.getElementById("future-title").textContent = t.futureTitle;
+  document.getElementById("future-text").textContent = t.futureText;
+  document.getElementById("launch-title").textContent = t.launchTitle;
+  document.getElementById("launch-text").textContent = t.launchText;
+  document.getElementById("closing-text").innerHTML = `<strong>${t.closing}</strong>`;
+}
+</script>
+
+
+</body>
+</html>
