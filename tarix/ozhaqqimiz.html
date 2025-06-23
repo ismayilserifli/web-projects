@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarix Araşdırmaları - Haqqımızda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./sekil/internet.png">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { 
+            primary: "#283593",
+            secondary: "#5C6BC0",
+            accent: "#FF5722",
+            antique: "#8D6E63"
+          },
+          fontFamily: {
+            'display': ['"Cinzel"', 'serif'],
+            'body': ['"Raleway"', 'sans-serif']
+          }
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.freepik.com/256/1306/1306290.png?ga=GA1.1.1714372165.1744657229&semt=sph">
+  <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.freepik.com/256/1306/1306290.png?ga=GA1.1.1714372165.1744657229&semt=sph">
+  <style>
+    .ancient-border {
+        background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 L2000,10' stroke='%23283593' stroke-width='2' stroke-dasharray='15,5,5,5' /%3E%3C/svg%3E");
+        height: 20px;
+        background-repeat: repeat-x;
+    }
+    .history-card {
+        transition: all 0.3s ease;
+        border-left: 4px solid #8D6E63;
+        background: linear-gradient(to right, #f9f9f9, #fff);
+    }
+    .history-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+    .timeline-dot {
+        width: 12px;
+        height: 12px;
+        background: #8D6E63;
+        border-radius: 50%;
+        position: absolute;
+        left: -6px;
+        top: 15px;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-body">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-indigo-900 to-indigo-700 text-white shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center">
+        <h1 class="text-2xl md:text-3xl font-bold font-display">Tarix Araşdırmaları</h1>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-accent transition-colors">Əsas Səhifə</a>
+      </nav>
+      <div class="md:hidden">
+        <button class="text-white">
+          <i class="ri-menu-line text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    <div class="ancient-border"></div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-64 md:h-96 flex items-center" style="background-image: url('https://images.unsplash.com/photo-1542662565-7e4b66bae529?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');">
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    <div class="container mx-auto px-4 relative z-10 text-white">
+      <h1 class="text-3xl md:text-5xl font-bold mb-4 font-display">Haqqımızda</h1>
+      <p class="text-lg md:text-xl max-w-2xl">Tarixə olan eşqimiz və araşdırmalarımız haqqında</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <main class="container mx-auto px-4 py-12">
+    <!-- Mission Section -->
+    <section class="mb-16 relative pl-8">
+      <div class="timeline-dot"></div>
+      <div class="history-card p-6 rounded-lg shadow-sm">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-primary font-display">Bizim Missiyamız</h2>
+        <div class="prose max-w-none">
+          <p>
+            Tarix Araşdırmaları vebsaytı Azərbaycanın və dünyanın zəngin tarixini, mədəniyyətini və mədəni irsini geniş auditoriyaya çatdırmaq məqsədi ilə yaradılmışdır. Məqsədimiz, həm yerli, həm də xarici oxuculara tarixi hadisələr haqqında doğru, obyektiv və elmi əsaslara dayanan məlumat təqdim etməkdir.
+          </p>
+          <div class="flex flex-col md:flex-row gap-6 mt-8">
+            <div class="md:w-1/2">
+              <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                   alt="Tarix Araşdırmaları" 
+                   class="w-full h-64 object-cover rounded-lg shadow-md">
+            </div>
+            <div class="md:w-1/2">
+              <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" 
+                   alt="Tarixi abidələr" 
+                   class="w-full h-64 object-cover rounded-lg shadow-md">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="mb-16 relative pl-8">
+      <div class="timeline-dot"></div>
+      <div class="history-card p-6 rounded-lg shadow-sm">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-primary font-display">Niyə Biz?</h2>
+        <div class="prose max-w-none">
+          <p>
+            Azərbaycanın hər bölgəsi - Şəkidən Qarabağa, Naxçıvandan Bakıya qədər - özünəməxsus tarixi, memarlıq irsi, adət-ənənələri və təbii gözəllikləri ilə fərqlənir. Lakin bu dəyərlər çox zaman kifayət qədər tədqiq edilmir və ya geniş auditoriyaya çatdırılmır. Biz bu boşluğu doldurmaq və hər kəsin bu irsə çıxışını asanlaşdırmaq istəyirik.
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+            <div class="bg-white p-4 rounded-lg shadow-sm border-t-4 border-accent">
+              <div class="text-4xl text-accent mb-3">
+                <i class="ri-book-line"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2 font-display">Elmi Dəqiqlik</h3>
+              <p>Bütün məlumatlar tarixi sənədlərə və etibarlı mənbələrə əsaslanır.</p>
+            </div>
+            
+            <div class="bg-white p-4 rounded-lg shadow-sm border-t-4 border-primary">
+              <div class="text-4xl text-primary mb-3">
+                <i class="ri-global-line"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2 font-display">Geniş Əhatə</h3>
+              <p>Yalnız Azərbaycan deyil, dünya tarixinin müxtəlif dövrlərini əhatə edirik.</p>
+            </div>
+            
+            <div class="bg-white p-4 rounded-lg shadow-sm border-t-4 border-antique">
+              <div class="text-4xl text-antique mb-3">
+                <i class="ri-team-line"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-2 font-display">Peşəkarlar Komandası</h3>
+              <p>Tarixçilər, arxeoloqlar və mütəxəssislərlə işləyirik.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Offer Section -->
+    <section class="mb-16 relative pl-8">
+      <div class="timeline-dot"></div>
+      <div class="history-card p-6 rounded-lg shadow-sm">
+        <h2 class="text-2xl md:text-3xl font-bold mb-4 text-primary font-display">Nə Təqdim Edirik?</h2>
+        <div class="prose max-w-none">
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <div class="text-accent mr-3 mt-1">
+                <i class="ri-checkbox-circle-fill"></i>
+              </div>
+              <span>Azərbaycanın və dünyanın müxtəlif dövrləri haqqında geniş araşdırmalar</span>
+            </li>
+            <li class="flex items-start">
+              <div class="text-accent mr-3 mt-1">
+                <i class="ri-checkbox-circle-fill"></i>
+              </div>
+              <span>Tarixi şəxsiyyətlər, hadisələr və abidələr haqqında ətraflı məqalələr</span>
+            </li>
+            <li class="flex items-start">
+              <div class="text-accent mr-3 mt-1">
+                <i class="ri-checkbox-circle-fill"></i>
+              </div>
+              <span>Yüksək keyfiyyətli foto və video materiallarla zənginləşdirilmiş məzmun</span>
+            </li>
+            <li class="flex items-start">
+              <div class="text-accent mr-3 mt-1">
+                <i class="ri-checkbox-circle-fill"></i>
+              </div>
+              <span>İnteraktiv xəritələr və zaman xətləri</span>
+            </li>
+            <li class="flex items-start">
+              <div class="text-accent mr-3 mt-1">
+                <i class="ri-checkbox-circle-fill"></i>
+              </div>
+              <span>Tarixə marağı artırmaq üçün xüsusi hazırlanmış materiallar</span>
+            </li>
+          </ul>
+          
+          <div class="mt-8 bg-indigo-50 p-6 rounded-lg border-l-4 border-primary">
+            <h3 class="text-xl font-bold mb-3 text-primary font-display">Tarixə Fərqli Baxış</h3>
+            <p>
+              Biz tarixi yalnız quru faktlar kimi deyil, insan həyatının, mədəniyyətin və sivilizasiyanın inkişafının hekayəsi kimi təqdim edirik. Hər bir məqaləmizdə oxucularımızı tarixin içərisinə aparmağa çalışırıq.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-900 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4 font-display">Tarix Araşdırmaları</h3>
+          <p>Tarixi dəyərlərimizi qoruyub saxlayaraq, gələcək nəsillərə çatdırmaq məqsədi daşıyırıq.</p>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4 font-display">Səhifələr</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="hover:text-accent transition-colors">Əsas Səhifə</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-xl font-bold mb-4 font-display">Əlaqə</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="ri-mail-line mr-2"></i>
+              <span>Yoxdu</span>
+            </li>
+            <li class="flex items-center">
+              <i class="ri-phone-line mr-2"></i>
+              <span>Yoxdu</span>
+            </li>
+            <li class="flex items-center">
+              <i class="ri-map-pin-line mr-2"></i>
+              <span>Bakı, Azərbaycan</span>
+            </li>
+          </ul>
+        </div>
+      
+      <div class="ancient-border mb-8 opacity-50"></div>
+      
+      <div class="text-center text-sm opacity-75">
+        <p>© 2025 Tarix Araşdırmaları. Bütün hüquqlar qorunur.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dil dəyişdirmə funksiyaları
+    const translations = {
+      az: {
+        header: "Tarix Araşdırmaları",
+        home: "Əsas Səhifə",
+        about: "Haqqımızda",
+        timeline: "Xronologiya",
+        gallery: "Qalereya",
+        // Digər tərcümələr əlavə edilə bilər
+      },
+      en: {
+        header: "History Research",
+        home: "Home",
+        about: "About Us",
+        timeline: "Timeline",
+        gallery: "Gallery"
+      },
+      ru: {
+        header: "Исторические Исследования",
+        home: "Главная",
+        about: "О нас",
+        timeline: "Хронология",
+        gallery: "Галерея"
+      }
+    };
+
+    function changeLanguage(lang) {
+      const t = translations[lang];
+      if (!t) return;
+
+      document.title = t.header + " - " + t.about;
+      document.querySelector('nav a[href="index.html"]').textContent = t.home;
+      document.querySelector('nav a[href="#"]:nth-child(2)').textContent = t.about;
+      // Digər elementlər üçün də tərcümə əlavə edilə bilər
+    }
+  </script>
+</body>
+</html>

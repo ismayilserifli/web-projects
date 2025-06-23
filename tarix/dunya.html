@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dünya Müharibələri</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { 
+              primary: "#6B7280",  // Military gray
+              secondary: "#9CA3AF",
+              accent: "#E5E7EB",
+              dark: "#4B5563"       // Darker military tone
+            },
+            fontFamily: {
+              'display': ['"Cinzel"', 'serif'],
+              'body': ['"Raleway"', 'sans-serif']
+            }
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.freepik.com/256/1306/1306290.png?ga=GA1.1.1714372165.1744657229&semt=sph">
+    <style>
+      .war-border {
+          background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 L2000,10' stroke='%234B5563' stroke-width='2' stroke-dasharray='15,5' /%3E%3C/svg%3E");
+          height: 20px;
+          background-repeat: repeat-x;
+      }
+      .war-card {
+          transition: all 0.3s ease;
+          border-left: 4px solid #4B5563;
+          background: linear-gradient(to right, #F3F4F6, #fff);
+      }
+      .war-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      .war-icon {
+          background: linear-gradient(135deg, #4B5563 0%, #6B7280 100%);
+      }
+      .medal-icon {
+          color: #D1A054;
+          filter: drop-shadow(0 0 8px rgba(209, 160, 84, 0.6));
+      }
+    </style>
+</head>
+<body class="bg-gray-100 font-body">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-[#4B5563] to-[#6B7280] shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <h1 class="text-4xl font-bold text-white text-center font-display">Dünya Müharibələri</h1>
+            <p class="text-xl text-white text-center mt-2">1914 - 1945</p>
+        </div>
+        <div class="war-border"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Introduction -->
+        <section class="mb-16 bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-6 text-primary font-display">Dünya Müharibələri Haqqında</h2>
+            <div class="prose max-w-none">
+                <p class="text-lg">
+                    İki Dünya müharibəsi 20-ci əsrin birinci yarısında bütün dünyanı dəyişdirən əsas hadisələr olmuşdur. Birinci Dünya müharibəsi (1914-1918) və İkinci Dünya müharibəsi (1939-1945) milyonlarla insanın həyatına son qoymuş, siyasi xəritəni dəyişdirmiş və müasir dünyanın formalaşmasında həlledici rol oynamışdır. Bu müharibələr həm də texnoloji inkişafın sürətlənməsinə səbəb olmuşdur.
+                </p>
+            </div>
+        </section>
+
+        <!-- Wars Timeline -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-primary text-center font-display">Dünya Müharibələrinin Əsas Mərhələləri</h2>
+            
+            <!-- WW1 -->
+            <div class="mb-12 pl-8 relative war-card p-6 rounded-r-lg shadow-sm">
+                <div class="absolute -left-4 top-6 war-icon w-8 h-8 rounded-full flex items-center justify-center text-white">
+                    <i class="ri-sword-line medal-icon"></i>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <img src="https://ordu.az/photos/2018/11/345-(-7710452870.jpg" 
+                             alt="Birinci Dünya müharibəsi" 
+                             class="w-full h-48 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-display">Birinci Dünya müharibəsi (1914-1918)</h3>
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <span class="bg-accent text-dark px-3 py-1 rounded-full">1914-1918</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            "Bütün müharibələrə son qoyacaq müharibə" kimi başlayan Birinci Dünya müharibəsi Avropada başlamış, lakin tezliklə bütün dünyaya yayılmışdır. Müharibədə əsas dövlətlər Antanta (Böyük Britaniya, Fransa, Rusiya) və Üçlük İttifaqı (Almaniya, Avstriya-Macarıstan, Osmanlı İmperiyası) qarşıdurması olmuşdur. Yeni silahlar (tank, kimyəvi silahlar, aviasiya) ilk dəfə geniş miqyasda istifadə edilmişdir. Müharibə 16 milyon insanın həyatına son qoymuşdur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Interwar Period -->
+            <div class="mb-12 pl-8 relative war-card p-6 rounded-r-lg shadow-sm">
+                <div class="absolute -left-4 top-6 war-icon w-8 h-8 rounded-full flex items-center justify-center text-white">
+                    <i class="ri-time-line medal-icon"></i>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Müharibələrarası dövr" 
+                             class="w-full h-48 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-display">Müharibələrarası dövr (1918-1939)</h3>
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <span class="bg-accent text-dark px-3 py-1 rounded-full">1918-1939</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Versal sülh müqaviləsi (1919) Almaniyaya ağır şərtlər qoydu. İqtisadi böhran (1929), faşizmin yüksəlişi (İtaliya, Almaniya) və SSRİ-nin formalaşması bu dövrün əsas xüsusiyyətləridir. Millətlər Liqasının qurulmasına baxmayaraq, yeni müharibənin qarşısı alına bilmədi. Silahlanma yarışı və ərazi iddiaları İkinci Dünya müharibəsinə gətirib çıxardı.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- WW2 -->
+            <div class="pl-8 relative war-card p-6 rounded-r-lg shadow-sm">
+                <div class="absolute -left-4 top-6 war-icon w-8 h-8 rounded-full flex items-center justify-center text-white">
+                    <i class="ri-bomb-line medal-icon"></i>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <img src="https://media.istockphoto.com/id/470309868/tr/foto%C4%9Fraf/explosion-nuclear-bomb-in-ocean.jpg?s=612x612&w=0&k=20&c=acyyN9sSITUYhr2aeAN6Yd-wRvGMbAfFWYu0RLUGtTI=" 
+                             alt="İkinci Dünya müharibəsi" 
+                             class="w-full h-48 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-display">İkinci Dünya müharibəsi (1939-1945)</h3>
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <span class="bg-accent text-dark px-3 py-1 rounded-full">1939-1945</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Tarixin ən qanlı müharibəsi. Müharibədə Əlverişlilər (SSRİ, ABŞ, Böyük Britaniya) və Ox dövlətləri (Almaniya, İtaliya, Yaponiya) iştirak etmişdir. Holokost, atom bombası, blitzkrieg taktikası kimi dəhşətli hadisələr baş vermişdir. Müharibə 70 milyondan çox insanın həyatına son qoymuş, BMT-nin yaranmasına və Soyuq müharibənin başlanmasına səbəb olmuşdur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Figures -->
+        <section class="mb-16 bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-6 text-primary font-display">Dünya Müharibələrinin Əsas Şəxsiyyətləri</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Figure 1 -->
+                <div class="bg-gradient-to-b from-[#F3F4F6] to-white p-6 rounded-lg shadow-sm border border-accent">
+                    <h3 class="text-xl font-bold mb-3 text-dark font-display">Vinston Çörçill</h3>
+                    <p class="text-gray-700 mb-4">Böyük Britaniyanın İkinci Dünya müharibəsində baş naziri. "Qan, zəhmət və göz yaşı" çıxışı ilə məşhurdur.</p>
+                    <span class="bg-accent text-dark px-3 py-1 rounded-full text-sm">1874-1965</span>
+                </div>
+                
+                <!-- Figure 2 -->
+                <div class="bg-gradient-to-b from-[#F3F4F6] to-white p-6 rounded-lg shadow-sm border border-accent">
+                    <h3 class="text-xl font-bold mb-3 text-dark font-display">Adolf Hitler</h3>
+                    <p class="text-gray-700 mb-4">Almaniyanın faşist lideri. İkinci Dünya müharibəsinin və Holokostun əsas təşkilatçısı.</p>
+                    <span class="bg-accent text-dark px-3 py-1 rounded-full text-sm">1889-1945</span>
+                </div>
+                
+                <!-- Figure 3 -->
+                <div class="bg-gradient-to-b from-[#F3F4F6] to-white p-6 rounded-lg shadow-sm border border-accent">
+                    <h3 class="text-xl font-bold mb-3 text-dark font-display">İosif Stalin</h3>
+                    <p class="text-gray-700 mb-4">SSRİ-nin lideri. "Böyük Vətən müharibəsi" dövründə ölkəni idarə etmişdir.</p>
+                    <span class="bg-accent text-dark px-3 py-1 rounded-full text-sm">1878-1953</span>
+                </div>
+                
+                <!-- Figure 4 -->
+                <div class="bg-gradient-to-b from-[#F3F4F6] to-white p-6 rounded-lg shadow-sm border border-accent">
+                    <h3 class="text-xl font-bold mb-3 text-dark font-display">Franklin Ruzvelt</h3>
+                    <p class="text-gray-700 mb-4">ABŞ prezidenti. Müharibədə Antitanın qələbəsində mühüm rol oynamışdır.</p>
+                    <span class="bg-accent text-dark px-3 py-1 rounded-full text-sm">1882-1945</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Events -->
+        <section class="mb-16 bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-6 text-primary font-display">Dünya Müharibələrinin Əsas Hadisələri</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-r from-[#F3F4F6] to-white p-6 rounded-lg border-l-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-primary font-display">Birinci Dünya müharibəsi</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>1914: Avstriya varisi Ferdinandın öldürülməsi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>1916: Verdun və Somme döyüşləri</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>1917: ABŞ-nin müharibəyə qoşulması</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>1918: Versal müqaviləsi</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-r from-[#F3F4F6] to-white p-6 rounded-lg border-l-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-primary font-display">İkinci Dünya müharibəsi</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>1939: Almaniyanın Polşaya hücumu</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>1941: Barbarossa əməliyyatı (SSRİ-yə hücum)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>1944: Normandiya desantı</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>1945: Hiroşima və Naqazakiyə atom bombası atılması</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-r from-[#F3F4F6] to-white p-6 rounded-lg border-l-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-primary font-display">Texnoloji İnkişaflar</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Tankların geniş tətbiqi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Radar və sonar texnologiyaları</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Reaktiv təyyarələrin inkişafı</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Atom enerjisinin kəşfi</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-r from-[#F3F4F6] to-white p-6 rounded-lg border-l-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-primary font-display">Siyasi Nəticələr</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>BMT-nin yaranması</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>SSRİ və ABŞ-nin superdövlət statusu qazanması</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Dekolonizasiya prosesinin başlanması</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Soyuq müharibənin başlanğıcı</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Dünya Müharibələri</h3>
+                    <p>20-ci əsrin ən dəhşətli və təsirli hadisələri.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Səhifələr</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent transition-colors">Əsas Səhifə</a></li>
+                        <li><a href="ozhaqqimiz.html" class="hover:text-accent transition-colors">Haqqımızda</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Əlaqə</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-2"></i>
+                            <span>Yoxdu</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-map-pin-line mr-2"></i>
+                            <span>Bakı, Azərbaycan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="war-border mb-8 opacity-50"></div>
+            
+            <div class="text-center text-sm opacity-75">
+                <p>© 2025 Dünya Müharibələri Araşdırmaları. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarixin İzləri ilə Səyahət</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { 
+              primary: "#8B5A2B",  // Antique bronze
+              secondary: "#A67C52",
+              accent: "#F5DEB3",
+              dark: "#5D4037"       // Dark sepia
+            },
+            fontFamily: {
+              'display': ['"Playfair Display"', 'serif'],
+              'body': ['"Open Sans"', 'sans-serif']
+            }
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.freepik.com/256/1306/1306290.png?ga=GA1.1.1714372165.1744657229&semt=sph">
+    <style>
+      .timeline-border {
+          background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 L2000,10' stroke='%235D4037' stroke-width='2' stroke-dasharray='15,5' /%3E%3C/svg%3E");
+          height: 20px;
+          background-repeat: repeat-x;
+      }
+      .era-card {
+          transition: all 0.3s ease;
+          background: linear-gradient(to right, rgba(245,222,179,0.1), #fff);
+          position: relative;
+          overflow: hidden;
+      }
+      .era-card::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 4px;
+          background: linear-gradient(to bottom, #8B5A2B, #5D4037);
+      }
+      .era-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px -5px rgba(139, 90, 43, 0.2);
+      }
+      .era-icon {
+          background: linear-gradient(135deg, #5D4037 0%, #8B5A2B 100%);
+          border: 2px solid #F5DEB3;
+      }
+      .explore-btn {
+          background: linear-gradient(to right, #8B5A2B, #A67C52);
+          transition: all 0.3s ease;
+      }
+      .explore-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 5px 15px rgba(139, 90, 43, 0.4);
+      }
+      .hero-pattern {
+          background-image: radial-gradient(rgba(139, 90, 43, 0.1) 2px, transparent 2px);
+          background-size: 40px 40px;
+      }
+    </style>
+</head>
+<body class="bg-amber-50 font-body">
+    <!-- Hero Section -->
+    <header class="relative hero-pattern">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-amber-50"></div>
+        <div class="container mx-auto px-4 py-24 relative z-10 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 text-dark font-display">Tarixin İzləri ilə Səyahət</h1>
+            <p class="text-xl md:text-2xl text-dark max-w-3xl mx-auto mb-8">
+                Keçmişin sirlərini kəşf edin, mədəniyyətlərin inkişafını öyrənin və tarixin ən maraqlı hadisələrini bizimlə birlikdə araşdırın.
+            </p>
+            <a href="#explore" class="inline-block text-white px-8 py-3 rounded-full explore-btn text-lg font-medium">
+                <i class="ri-compass-3-line mr-2"></i>Kəşf etməyə başla
+            </a>
+        </div>
+        <div class="timeline-border"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16" id="explore">
+        <!-- Featured Eras -->
+        <section class="mb-24">
+            <h2 class="text-3xl font-bold mb-12 text-primary text-center font-display">Mədəniyyətlərin İzləri</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Ancient -->
+                <div class="era-card p-6 rounded-lg shadow-sm relative">
+                    <div class="absolute -left-4 top-6 era-icon w-10 h-10 rounded-full flex items-center justify-center text-white">
+                        <i class="ri-ancient-pavilion-line text-xl"></i>
+                    </div>
+                    <div class="ml-6">
+                        <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" 
+                             alt="Qədim mədəniyyətlər" 
+                             class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-display">Qədim Dövr</h3>
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <span class="bg-accent text-dark px-3 py-1 rounded-full">E.ə. 3000 - 500</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Misir piramidaları, Mesopotamiya, Qədim Çin və Hindistan mədəniyyətləri. Yazının icadı, ilk şəhər dövlətləri və monumental memarlıq.
+                        </p>
+                        <a href="#" class="text-primary font-medium inline-flex items-center">
+                            Ətraflı <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Medieval -->
+                <div class="era-card p-6 rounded-lg shadow-sm relative">
+                    <div class="absolute -left-4 top-6 era-icon w-10 h-10 rounded-full flex items-center justify-center text-white">
+                        <i class="ri-castle-line text-xl"></i>
+                    </div>
+                    <div class="ml-6">
+                        <img src="https://images.unsplash.com/photo-1542662565-7e4b66bae529?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                             alt="Orta əsrlər" 
+                             class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-display">Orta Əsrlər</h3>
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <span class="bg-accent text-dark px-3 py-1 rounded-full">500 - 1500</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            Qalalar, kilsələr, İslamın qızıl dövrü, Səlcuqlar və Osmanlı imperiyası. Elmin, fəlsəfənin və memarlığın inkişafı.
+                        </p>
+                        <a href="#" class="text-primary font-medium inline-flex items-center">
+                            Ətraflı <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Modern -->
+                <div class="era-card p-6 rounded-lg shadow-sm relative">
+                    <div class="absolute -left-4 top-6 era-icon w-10 h-10 rounded-full flex items-center justify-center text-white">
+                        <i class="ri-building-line text-xl"></i>
+                    </div>
+                    <div class="ml-6">
+                        <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="Müasir dövr" 
+                             class="w-full h-48 object-cover rounded-lg shadow-md mb-4">
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-display">Müasir Dövr</h3>
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <span class="bg-accent text-dark px-3 py-1 rounded-full">1500 - İndi</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            İntibah, sənaye inqilabı, milli dövlətlərin yaranması. Texnologiya və qlobal əlaqələr dövrü. Mədəniyyətlərin qarşılıqlı təsiri.
+                        </p>
+                        <a href="#" class="text-primary font-medium inline-flex items-center">
+                            Ətraflı <i class="ri-arrow-right-line ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Timeline -->
+        <section class="mb-24 bg-white p-8 rounded-xl shadow-lg border border-accent">
+            <h2 class="text-3xl font-bold mb-8 text-primary text-center font-display">İnteraktiv Tarix Xətti</h2>
+            
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-1/2 h-full w-1 bg-primary transform -translate-x-1/2"></div>
+                
+                <!-- Timeline items -->
+                <div class="space-y-12">
+                    <!-- Item 1 -->
+                    <div class="relative flex items-center">
+                        <div class="z-10 flex-shrink-0 w-6 h-6 rounded-full bg-primary border-4 border-accent mx-auto"></div>
+                        <div class="ml-8 md:ml-16 p-6 bg-amber-50 rounded-lg shadow-sm border border-accent w-full">
+                            <h3 class="text-xl font-bold mb-2 text-primary font-display">Yazının İcadı</h3>
+                            <div class="flex items-center mb-3 text-sm text-gray-500">
+                                <span class="bg-accent text-dark px-3 py-1 rounded-full">E.ə. 3200</span>
+                            </div>
+                            <p class="text-gray-700">
+                                Mesopotamiyada klin yazısının yaranması. İnsanlıq tarixində ən mühüm inkişaflardan biri.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="relative flex items-center">
+                        <div class="z-10 flex-shrink-0 w-6 h-6 rounded-full bg-primary border-4 border-accent mx-auto"></div>
+                        <div class="ml-8 md:ml-16 p-6 bg-amber-50 rounded-lg shadow-sm border border-accent w-full">
+                            <h3 class="text-xl font-bold mb-2 text-primary font-display">İslamın Yayılması</h3>
+                            <div class="flex items-center mb-3 text-sm text-gray-500">
+                                <span class="bg-accent text-dark px-3 py-1 rounded-full">632-750</span>
+                            </div>
+                            <p class="text-gray-700">
+                                İslam dininin Ərəb yarımadasından bütün Yaxın Şərqə, Şimali Afrikaya və İspaniyaya yayılması.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="relative flex items-center">
+                        <div class="z-10 flex-shrink-0 w-6 h-6 rounded-full bg-primary border-4 border-accent mx-auto"></div>
+                        <div class="ml-8 md:ml-16 p-6 bg-amber-50 rounded-lg shadow-sm border border-accent w-full">
+                            <h3 class="text-xl font-bold mb-2 text-primary font-display">Sənaye İnqilabı</h3>
+                            <div class="flex items-center mb-3 text-sm text-gray-500">
+                                <span class="bg-accent text-dark px-3 py-1 rounded-full">1760-1840</span>
+                            </div>
+                            <p class="text-gray-700">
+                                Buxar maşınının icadı və istehsalın mexanikləşməsi. Cəmiyyətin kənd təsərrüfatından sənayeyə keçidi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Showcase -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-12 text-primary text-center font-display">Mədəni İrs Nümunələri</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Artifact 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://readdy.ai/api/search-image?query=Ancient%20Egyptian%20civilization%2C%20pyramids%20of%20Giza%2C%20sphinx%2C%20hieroglyphics%20on%20temple%20walls%2C%20Nile%20river%20in%20background%2C%20golden%20sunset%20light%2C%20atmospheric%2C%20professional%20photography%2C%20high%20resolution%2C%20detailed&width=600&height=400&seq=card1&orientation=landscape" 
+                         alt="Qədim sənət əsəri" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white font-display">Qədim Misir Heykəlləri</h3>
+                            <p class="text-accent">E.ə. 2500</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artifact 2 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://readdy.ai/api/search-image?query=Ancient%20Egyptian%20artifacts%20from%20Early%20Dynastic%20Period%2C%20hieroglyphic%20tablets%2C%20early%20royal%20symbols%2C%20archaeological%20findings%2C%20museum%20quality%20photograph%2C%20detailed%20historical%20items&width=600&height=400&seq=2&orientation=landscape" 
+                         alt="Orta əsrlər əlyazması" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white font-display">Orta Əsrlər Əlyazmaları</h3>
+                            <p class="text-accent">XII Əsr</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artifact 3 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://worldart2011.wordpress.com/wp-content/uploads/2016/01/botticelli-primavera.jpg?w=405&h=266" 
+                         alt="İntibah rəssamlığı" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white font-display">İntibah Rəssamlığı</h3>
+                            <p class="text-accent">XV Əsr</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Artifact 4 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-md h-64">
+                    <img src="https://invest.smb.gov.az/storage/680/189675.jpg" 
+                         alt="Müasir incəsənət" 
+                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                        <div>
+                            <h3 class="text-xl font-bold text-white font-display">Müasir İncəsənət</h3>
+                            <p class="text-accent">XX-XXI Əsr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Tarixin İzləri</h3>
+                    <p>Keçmişin sirlərini araşdırmaq üçün birlikdə səyahət edək.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Dövrlər</h3>
+                    <ul class="space-y-2">
+                        <li><a href="qedm.html" class="hover:text-accent transition-colors">Qədim Dövr</a></li>
+                        <li><a href="orta.html" class="hover:text-accent transition-colors">Orta Əsrlər</a></li>
+                        <li><a href="muasir.html" class="hover:text-accent transition-colors">Müasir Dövr</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Xidmətlər</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent transition-colors">Əsas səhifə</a></li>
+                        <li><a href="ozhaqqimiz.html" class="hover:text-accent transition-colors">Haqqımızda</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Əlaqə</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-2"></i>
+                            <span>Yoxdu</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-phone-line mr-2"></i>
+                            <span>Yoxdu</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-map-pin-line mr-2"></i>
+                            <span>Bakı, Azərbaycan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="timeline-border mb-8 opacity-30"></div>
+            
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm opacity-75 mb-4 md:mb-0">
+                    <p>© 2025 Tarixin İzləri ilə Səyahət. Bütün hüquqlar qorunur.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-accent transition-colors">
+                        <i class="ri-facebook-fill text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-accent transition-colors">
+                        <i class="ri-instagram-line text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-accent transition-colors">
+                        <i class="ri-youtube-fill text-xl"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-accent transition-colors">
+                        <i class="ri-twitter-fill text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

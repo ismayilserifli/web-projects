@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İntibah Dövrü</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { 
+              primary: "#6A1B9A",
+              secondary: "#9C27B0",
+              accent: "#E1BEE7",
+              dark: "#4A148C"
+            },
+            fontFamily: {
+              'display': ['"Cinzel"', 'serif'],
+              'body': ['"Raleway"', 'sans-serif']
+            }
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.freepik.com/256/1306/1306290.png?ga=GA1.1.1714372165.1744657229&semt=sph">
+    <style>
+      .renaissance-border {
+          background-image: url("data:image/svg+xml,%3Csvg width='100%25' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 L2000,10' stroke='%234A148C' stroke-width='2' stroke-dasharray='15,5,5,5' /%3E%3C/svg%3E");
+          height: 20px;
+          background-repeat: repeat-x;
+      }
+      .era-card {
+          transition: all 0.3s ease;
+          border-left: 4px solid #4A148C;
+          background: linear-gradient(to right, #F3E5F5, #fff);
+      }
+      .era-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      .era-icon {
+          background: linear-gradient(135deg, #4A148C 0%, #6A1B9A 100%);
+      }
+    </style>
+</head>
+<body class="bg-gray-50 font-body">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-[#4A148C] to-[#6A1B9A] shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <h1 class="text-4xl font-bold text-white text-center font-display">İntibah Dövrü</h1>
+            <p class="text-xl text-white text-center mt-2">1350 - 1600</p>
+        </div>
+        <div class="renaissance-border"></div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Introduction -->
+        <section class="mb-16 bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-6 text-primary font-display">İntibah Dövrü Haqqında</h2>
+            <div class="prose max-w-none">
+                <p class="text-lg">
+                    İntibah (Renessans) dövrü Avropada orta əsrlərdən müasir dövrə keçid mərhələsidir. Bu dövrdə incəsənət, elm, fəlsəfə və ədəbiyyat sahələrində böyük yeniliklər baş vermiş, antik dövr ideallarına qayıdış müşahidə edilmişdir. İntibah İtaliyada başlamış və bütün Avropaya yayılmışdır.
+                </p>
+            </div>
+        </section>
+
+        <!-- Timeline -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-primary text-center font-display">İntibah Dövrünün Əsas Mərhələləri</h2>
+            
+            <!-- Era 1 -->
+            <div class="mb-12 pl-8 relative era-card p-6 rounded-r-lg shadow-sm">
+                <div class="absolute -left-4 top-6 era-icon w-8 h-8 rounded-full flex items-center justify-center text-white">
+                    <i class="ri-artboard-line"></i>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2094&q=80" 
+                             alt="Erkən İntibah" 
+                             class="w-full h-48 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-display">Erkən İntibah (1350-1500)</h3>
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <span class="bg-accent text-dark px-3 py-1 rounded-full">1350-1500</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            İntibahın İtaliyada (xüsusilə Florensiyada) başlanğıc mərhələsi. Bu dövrdə humanizm ideyaları yayılmağa başlamış, perspektivli rəssamlıq texnikaları inkişaf etmişdir. Dante, Petrarka və Boccaccio kimi şairlər, Donatello və Botticelli kimi rəssamlar bu dövrün nümayəndələridir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Era 2 -->
+            <div class="mb-12 pl-8 relative era-card p-6 rounded-r-lg shadow-sm">
+                <div class="absolute -left-4 top-6 era-icon w-8 h-8 rounded-full flex items-center justify-center text-white">
+                    <i class="ri-brush-line"></i>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2094&q=80" 
+                             alt="Yüksək İntibah" 
+                             class="w-full h-48 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-display">Yüksək İntibah (1500-1530)</h3>
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <span class="bg-accent text-dark px-3 py-1 rounded-full">1500-1530</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            İntibah incəsənətinin zirvəyə çatdığı dövr. Leonardo da Vinçi, Mikelancelo və Rafael kimi dahilər bu dövrdə yaşamış və əsərlər yaratmışdır. Roma və Florensiya mədəniyyət mərkəzlərinə çevrilmişdir. Bu dövr həmçinin kəşflər dövrünün başlanğıcına təsadüf edir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Era 3 -->
+            <div class="pl-8 relative era-card p-6 rounded-r-lg shadow-sm">
+                <div class="absolute -left-4 top-6 era-icon w-8 h-8 rounded-full flex items-center justify-center text-white">
+                    <i class="ri-compass-discover-line"></i>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="md:w-1/3">
+                        <img src="https://news.milli.az/media/2016/11/01/485131.jpg" 
+                             alt="Şimal İntibahı" 
+                             class="w-full h-48 object-cover rounded-lg shadow-md">
+                    </div>
+                    <div class="md:w-2/3">
+                        <h3 class="text-2xl font-bold mb-2 text-primary font-display">Şimal İntibahı (1530-1600)</h3>
+                        <div class="flex items-center mb-3 text-sm text-gray-500">
+                            <span class="bg-accent text-dark px-3 py-1 rounded-full">1530-1600</span>
+                        </div>
+                        <p class="text-gray-700 mb-4">
+                            İntibah ideyalarının İtaliyadan şimala - Almaniya, Niderland, Fransa və İngiltərəyə yayıldığı dövr. Bu dövrdə Erasmus, Dürer, Van Eyck kimi şəxslər fəaliyyət göstərmişdir. Reformasiya hərəkatı və çap maşınının ixtirası bu dövrün əsas hadisələrindəndir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Figures -->
+        <section class="mb-16 bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-6 text-primary font-display">İntibahın Əsas Şəxsiyyətləri</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Figure 1 -->
+                <div class="bg-gradient-to-b from-[#F3E5F5] to-white p-6 rounded-lg shadow-sm border border-accent">
+                    <h3 class="text-xl font-bold mb-3 text-dark font-display">Leonardo da Vinçi</h3>
+                    <p class="text-gray-700 mb-4">Rəssam, alim və ixtiraçı. "Mona Liza" və "Sonuncu şam yeməyi" əsərləri ilə məşhurdur.</p>
+                    <span class="bg-accent text-dark px-3 py-1 rounded-full text-sm">1452-1519</span>
+                </div>
+                
+                <!-- Figure 2 -->
+                <div class="bg-gradient-to-b from-[#F3E5F5] to-white p-6 rounded-lg shadow-sm border border-accent">
+                    <h3 class="text-xl font-bold mb-3 text-dark font-display">Mikelancelo</h3>
+                    <p class="text-gray-700 mb-4">Heykəltaraş və rəssam. "Davud" heykəli və Sistin kapellasının tavan rəsmləri.</p>
+                    <span class="bg-accent text-dark px-3 py-1 rounded-full text-sm">1475-1564</span>
+                </div>
+                
+                <!-- Figure 3 -->
+                <div class="bg-gradient-to-b from-[#F3E5F5] to-white p-6 rounded-lg shadow-sm border border-accent">
+                    <h3 class="text-xl font-bold mb-3 text-dark font-display">Rafael</h3>
+                    <p class="text-gray-700 mb-4">Rəssam və memar. "Afina məktəbi" əsəri ilə məşhurdur.</p>
+                    <span class="bg-accent text-dark px-3 py-1 rounded-full text-sm">1483-1520</span>
+                </div>
+                
+                <!-- Figure 4 -->
+                <div class="bg-gradient-to-b from-[#F3E5F5] to-white p-6 rounded-lg shadow-sm border border-accent">
+                    <h3 class="text-xl font-bold mb-3 text-dark font-display">Nikolo Makiavelli</h3>
+                    <p class="text-gray-700 mb-4">Siyasət fəlsəfəçisi. "Hökmdar" əsərinin müəllifi.</p>
+                    <span class="bg-accent text-dark px-3 py-1 rounded-full text-sm">1469-1527</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements -->
+        <section class="mb-16 bg-white p-8 rounded-lg shadow-md">
+            <h2 class="text-3xl font-bold mb-6 text-primary font-display">İntibahın Əsas Nailiyyətləri</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-r from-[#F3E5F5] to-white p-6 rounded-lg border-l-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-primary font-display">İncəsənət</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Perspektiv texnikasının kəşfi və tətbiqi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Anatomiya tədqiqatlarının rəssamlığa tətbiqi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Realistik insan təsvirlərinin inkişafı</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-r from-[#F3E5F5] to-white p-6 rounded-lg border-l-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-primary font-display">Elm və Texnologiya</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Çap maşınının ixtirası (Gutenberg)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Heliosentrik sistemin təsdiqi (Kopernik)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Anatomiya sahəsində irəliləyişlər</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-r from-[#F3E5F5] to-white p-6 rounded-lg border-l-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-primary font-display">Fəlsəfə və Ədəbiyyat</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Humanizm ideyalarının yayılması</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Antik ədəbiyyatın yenidən kəşfi</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Milli dillərdə ədəbi əsərlərin yazılması</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-r from-[#F3E5F5] to-white p-6 rounded-lg border-l-4 border-primary">
+                    <h3 class="text-xl font-bold mb-3 text-primary font-display">Kəşflər</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Yeni qitələrin kəşfi (Amerika)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Dünya səyahətləri (Kolumb, Maqellan)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-checkbox-circle-fill text-primary mr-2 mt-1"></i>
+                            <span>Yeni ticarət yollarının açılması</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">İntibah Dövrü</h3>
+                    <p>Avropa mədəniyyətinin yenidən doğuşu və inkişafı.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Səhifələr</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-accent transition-colors">Əsas Səhifə</a></li>
+                        <li><a href="ozhaqqimiz.html" class="hover:text-accent transition-colors">Haqqımızda</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-display">Əlaqə</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="ri-mail-line mr-2"></i>
+                            <span>Yoxdu</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="ri-map-pin-line mr-2"></i>
+                            <span>Bakı, Azərbaycan</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="renaissance-border mb-8 opacity-50"></div>
+            
+            <div class="text-center text-sm opacity-75">
+                <p>© 2025 İntibah Dövrü Araşdırmaları. Bütün hüquqlar qorunur.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
