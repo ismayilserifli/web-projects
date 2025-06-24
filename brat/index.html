@@ -3,71 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Orta Sayt</title>
+  <title>Premium Abunə Paketləri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
+    :root {
+      --primary: #4CAF50;
+      --primary-dark: #388E3C;
+      --secondary: #FFC107;
+      --dark: #212121;
+      --light: #f5f5f5;
+      --gray: #757575;
+    }
+    
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
     }
-
+    
     body {
-      background-color: #f5f5f5;
-      color: #333;
-    }
-
-    header {
-      background-color: #0077cc;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      margin-top: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-
-    main {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      margin-bottom: 10px;
-    }
-
-    p {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: var(--dark);
       line-height: 1.6;
     }
-
-    footer {
-      background-color: #333;
-      color: #ddd;
+    
+    header {
+      background: linear-gradient(to right, var(--primary), var(--primary-dark));
+      color: white;
       text-align: center;
-      padding: 20px;
-      margin-top: 40px;
+      padding: 2rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
     }
-
-    @media(max-width: 768px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
+    
+    header::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      width: 200px;
+      height: 200px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+    }
+    
+    header::after {
+      content: "";
+      position: absolute;
+      bottom: -80px;
+      right: -30px;
+      width: 250px;
+      height: 250px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .subtitle {
+      font-weight: 300;
+      opacity: 0.9;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    }
+    
+    .card-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--secondary);
+      color: var(--dark);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    
+    .card-content {
+      padding: 1.5rem;
+    }
+    
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-dark);
+    }
+    
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+    
+    .price span {
+      font-size: 1rem;
+      color: var(--gray);
+      font-weight: 400;
+    }
+    
+    .card p {
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    
+    .features {
+      margin-bottom: 1.5rem;
+    }
+    
+    .feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+    
+    .feature i {
+      color: var(--primary);
+      margin-right: 0.5rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      text-align: center;
+      width: 100%;
+    }
+    
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+    }
+    
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+    }
+    
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .social-links a {
+      color: white;
+      background: rgba(255,255,255,0.1);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .social-links a:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
       }
-
-      main {
-        margin: 20px;
+      
+      h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -75,26 +227,76 @@
 <body>
 
   <header>
-    <h1>Sadə Orta Sayt</h1>
-    <nav>
-      <a href="#">Ana Səhifə</a>
-      <a href="#">Haqqımızda</a>
-      <a href="#">Əlaqə</a>
-    </nav>
+    <h1>Premium Abunə Paketləri</h1>
+    <p class="subtitle">Sosial media hesabınızı növbəti səviyyəyə qaldırın</p>
   </header>
 
-  <main>
-    <h2>Xoş gəlmisiniz!</h2>
-    <p>
-      Bu sayt nümunəsi orta ölçülü layihələr üçün uyğundur. Burada başlıq, əsas məzmun sahəsi və sadə footer var. Rahat şəkildə öz məlumatlarını yerləşdirə bilərsən.
-    </p>
-    <p>
-      Dizayn sadə və mobil dostudur. İstəsən bura şəkil, əlavə bloklar, düymələr və s. əlavə edə bilərsən.
-    </p>
-  </main>
+  <div class="container">
+    <div class="card">
+      <div class="card-badge">Ən Populyar</div>
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="100 abunə" class="card-img">
+      <div class="card-content">
+        <h3>Starter Paket</h3>
+        <div class="price">2 AZN <span></span></div>
+        <p>Kiçik başlayanlar üçün ideal abunə paketi ilə səhifənizi inkişaf etdirin.</p>
+        
+        <div class="features">
+          <div class="feature"><i class="fas fa-check"></i> 100 Real Abunəçi</div>
+        </div>
+        
+        <a href="paket1.html" class="btn">İndi Sifariş Et</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2015&q=80" alt="250 abunə" class="card-img">
+      <div class="card-content">
+        <h3>Growth Paket</h3>
+        <div class="price">4 AZN <span></span></div>
+        <p>Daha çox izləyici ilə səhifəni böyüdün və görünürlüyünüzü artırın.</p>
+        
+        <div class="features">
+          <div class="feature"><i class="fas fa-check"></i> 250 Real Abunəçi</div>
+        </div>
+        
+        <a href="paket2.html" class="btn">İndi Sifariş Et</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-badge">Ən Çox Qənaət</div>
+      <img src="https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" alt="500 abunə" class="card-img">
+      <div class="card-content">
+        <h3>Pro Paket</h3>
+        <div class="price">7 AZN <span></span></div>
+        <p>Orta səviyyəli böyümə üçün ən uyğun və qənaətcil seçim.</p>
+        
+        <div class="features">
+          <div class="feature"><i class="fas fa-check"></i> 500 Real Abunəçi</div>
+        </div>
+        
+        <a href="paket3.html" class="btn">İndi Sifariş Et</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="1000 abunə" class="card-img">
+      <div class="card-content">
+        <h3>Elite Paket</h3>
+        <div class="price">12 AZN <span></span></div>
+        <p>Hədəfə çatmaq üçün ən sürətli və effektiv paket.</p>
+        
+        <div class="features">
+          <div class="feature"><i class="fas fa-check"></i> 1000 Real Abunəçi</div>
+        </div>
+        
+        <a href="paket4.html" class="btn">İndi Sifariş Et</a>
+      </div>
+    </div>
+  </div>
 
   <footer>
-    © 2025 Sadə Sayt | Bütün hüquqlar qorunur.
+    <p>&copy; 2025 Premium Abunə Xidməti. Bütün hüquqlar qorunur.</p>
   </footer>
 
 </body>
